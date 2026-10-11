@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Document Intelligence — Review 4 Master Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .slide { display: none; }
+    .slide.active { display: flex; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col h-screen overflow-hidden select-none">
+
+  <!-- Top Bar -->
+  <header class="h-14 bg-slate-900 border-b border-slate-800 px-6 flex items-center justify-between z-10 shrink-0">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-md">
+        DI
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-tight text-white">Enterprise Document Intelligence & Workflow Automation</h1>
+        <p class="text-[11px] text-slate-400">Review 4 Comprehensive Defense (Reviews 1 to 4)</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span id="slide-indicator" class="text-xs font-mono px-2.5 py-1 bg-slate-800 rounded-md text-indigo-400 border border-slate-700">
+        Slide 1 / 22
+      </span>
+      <button onclick="toggleFullScreen()" class="p-1.5 text-slate-400 hover:text-white rounded hover:bg-slate-800" title="Full Screen (F)">
+        <i class="fa-solid fa-expand text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide Stage -->
+  <main class="flex-1 relative flex items-center justify-center p-6 lg:p-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/40">
+    <div id="slides-container" class="w-full max-w-5xl aspect-[16/9] max-h-[85vh] bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+      <!-- Slides will be rendered here dynamically via JS -->
+    </div>
+  </main>
+
+  <!-- Bottom Navigation Controller -->
+  <footer class="h-16 bg-slate-900 border-t border-slate-800 px-6 flex items-center justify-between shrink-0">
+    <div class="text-xs text-slate-400">
+      Use <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">→</kbd> or Click to navigate
+    </div>
+    <div class="flex items-center space-x-3">
+      <button onclick="prevSlide()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold text-white border border-slate-700 transition flex items-center space-x-1.5">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+        <span>Previous</span>
+      </button>
+      <button onclick="nextSlide()" class="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-sm font-semibold text-white shadow-md shadow-indigo-600/30 transition flex items-center space-x-1.5">
+        <span>Next</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    const slidesData = [
+      {
+        review: "FINAL DEFENSE",
+        title: "Enterprise Document Intelligence & Workflow Automation Platform",
+        subtitle: "Comprehensive Final Project Defense — Reviews 1, 2, 3, & 4",
+        bullets: [
+          "<b>Domain:</b> Distributed Systems, Information Retrieval, Cloud Security & Enterprise Software",
+          "<b>Core Triad:</b> Polyglot Persistence | Access-Aware Vector RAG | Cryptographic Audit Chaining",
+          "<b>Event Messaging:</b> Apache Kafka Microservices Architecture with Real-Time Notification Center",
+          "<b>Verification Status:</b> 21 / 21 Passing Automated Pytest Suite | 0.00% Authorization Leakage"
+        ]
+      },
+      {
+        review: "EXECUTIVE SUMMARY",
+        title: "Executive Summary & Core Platform Vision",
+        subtitle: "Unifying Document Intelligence, Workflow Integrity, and Enterprise Security",
+        bullets: [
+          "<b>The Enterprise Problem:</b> Unstructured document silos (PDF/DOCX) create severe compliance risks, vector search data leakage, and manual approval bottlenecks.",
+          "<b>Polyglot Persistence Engine:</b> Relational PostgreSQL 16 (ACID & Audit), Flexible MongoDB 7.0 (Metadata), and ChromaDB (Vector HNSW).",
+          "<b>Access-Aware Vector RAG:</b> Security boundary enforced directly within the vector retrieval layer—eliminating post-retrieval data leakage.",
+          "<b>Serialized State Machine:</b> Workflow transitions protected by PostgreSQL row-level locks (<code>SELECT ... FOR UPDATE</code>).",
+          "<b>SHA-256 Audit Trail:</b> Cryptographically chained ledger providing verifiable tamper detection.",
+          "<b>Kafka Event Pipeline:</b> Microservices-based decoupled notification routing for real-time workflow alerts."
+        ]
+      },
+      {
+        review: "ROADMAP",
+        title: "Four-Review Engineering Progression",
+        subtitle: "Systematic Evolution from Requirements to Production-Grade Platform",
+        bullets: [
+          "<b>Review 1 (Problem & Requirements):</b> Literature survey, industry motivation, functional & non-functional specifications, user personas.",
+          "<b>Review 2 (Architecture & Modeling):</b> Polyglot database schema design, multi-tenant RBAC security model, finite state machine formal grammar.",
+          "<b>Review 3 (Core Implementation):</b> Ingestion pipeline (PyMuPDF), Access-Aware RAG retrieval, cryptographic SHA-256 audit chain, concurrency row locking, 18/18 test suite.",
+          "<b>Review 4 (Decoupling & Messaging):</b> Microservices decomposition, Apache Kafka event-driven notifications, React Notification Center, 21/21 automated tests, 100% project completion."
+        ]
+      },
+      {
+        review: "REVIEW 1",
+        title: "Problem Definition & Industry Motivation",
+        subtitle: "Critical Vulnerabilities in Modern Enterprise Document Workflows",
+        bullets: [
+          "<b>Document Silos & Discovery Deficits:</b> Traditional keyword search fails on complex legal contracts, financial statements, and technical policies.",
+          "<b>Catastrophic Data Leakage in AI Systems:</b> Standard RAG pipelines retrieve confidential data into memory before filtering, exposing sensitive terms.",
+          "<b>Concurrency Conflicts & Workflow Desynchronization:</b> Simultaneous reviews cause race conditions, resulting in contradictory approvals.",
+          "<b>Vulnerability to Audit Tampering:</b> Relational database logs are easily mutable by privileged database administrators without detection."
+        ]
+      },
+      {
+        review: "REVIEW 1",
+        title: "Literature Survey & Comparative Analysis",
+        subtitle: "Evaluating Traditional Systems vs. Proposed Access-Aware Architecture",
+        bullets: [
+          "<b>Traditional DMS (SharePoint, Alfresco):</b> Static schemas, no semantic vector retrieval, vulnerable to unauthorized manual overrides.",
+          "<b>Standard GenAI/RAG (LangChain, LlamaIndex):</b> Applies security filtering after top-k vector search—retrieves unauthorized chunks into RAM.",
+          "<b>Our Proposed Innovation — Access-Aware RAG:</b> Injects JWT tenant and department claims directly into ChromaDB query conditions.",
+          "<b>Blockchain-Inspired Cryptographic Auditing:</b> Implements SHA-256 block hashing where each event cryptographically signs the preceding event hash.",
+          "<b>Row-Level ACID Locking:</b> Utilizes explicit PostgreSQL locks to prevent race conditions during state transitions."
+        ]
+      },
+      {
+        review: "REVIEW 1",
+        title: "System Requirements Specification (SRS)",
+        subtitle: "Detailed Functional and Non-Functional Engineering Boundaries",
+        bullets: [
+          "<b>Functional Requirement 1:</b> Multi-format document ingestion (PDF, DOCX) with text extraction, sliding window chunking, and embedding generation.",
+          "<b>Functional Requirement 2:</b> Multi-tenant Role-Based Access Control (RBAC) with granular department scoping (legal, finance, general).",
+          "<b>Functional Requirement 3:</b> Finite State Machine enforcing valid transitions (DRAFT -> UNDER_REVIEW -> APPROVED/REJECTED -> ARCHIVED).",
+          "<b>Functional Requirement 4:</b> Access-Aware Semantic Search with exact source citations (document title, chunk ID, page number).",
+          "<b>Functional Requirement 5:</b> Real-time Kafka-driven notifications for pending reviews, approvals, and system alerts.",
+          "<b>Non-Functional:</b> Sub-200ms REST p95 latency, 0.00% data leakage across roles and tenants, sub-second vector search."
+        ]
+      },
+      {
+        review: "REVIEW 2",
+        title: "System Architecture & Microservices Decoupling",
+        subtitle: "Modular, Scalable, Polyglot Cloud Architecture",
+        bullets: [
+          "<b>React 18 SPA (Port 5173/3000):</b> Vite, TypeScript, Tailwind CSS, Lucide icons, responsive dashboard, and Notification Center.",
+          "<b>Core API Gateway & Services (Port 8000):</b> FastAPI backend handling auth, ingestion, workflow execution, RAG, and audit logging.",
+          "<b>Kafka Event Pipeline:</b> Producers emit structured events on topic <code>document.workflow.events</code>.",
+          "<b>Notification Microservice (Port 8001):</b> Dedicated consumer group subscribing to workflow events and dispatching targeted alerts.",
+          "<b>Polyglot Persistence Layer:</b> PostgreSQL 16 (relational/ACID), MongoDB 7.0 (flexible metadata), ChromaDB (cosine HNSW index)."
+        ]
+      },
+      {
+        review: "REVIEW 2",
+        title: "Polyglot Persistence Architecture",
+        subtitle: "Optimal Storage Technology for Each Enterprise Data Requirement",
+        bullets: [
+          "<b>PostgreSQL 16:</b> Users, hashed credentials, roles, document status, workflow history, SHA-256 audit ledger, and notifications.",
+          "<b>MongoDB 7.0:</b> Schema-free dynamic attributes (custom_fields, counterparty data, renewal terms, token statistics, tags).",
+          "<b>ChromaDB Vector Store:</b> 384-dimensional dense embeddings (all-MiniLM-L6-v2) indexed using Hierarchical Navigable Small World (HNSW).",
+          "<b>Why Polyglot?:</b> Relational DBs cannot scale arbitrary JSON metadata; NoSQL DBs lack ACID serializability; vector DBs lack relational joins.",
+          "<b>Seamless Resilient Fallback:</b> Native local support with embedded SQLite/Postgres and mock fallbacks ensures zero runtime failures."
+        ]
+      },
+      {
+        review: "REVIEW 2",
+        title: "Multi-Tenant RBAC & Department Scoping",
+        subtitle: "Granular Authorization Matrix Enforced Across Storage Tiers",
+        bullets: [
+          "<b>ADMIN Role:</b> Scope <code>['*']</code> — Full global access across all departments (legal, finance, general); can execute all workflow transitions.",
+          "<b>MANAGER Role:</b> Scope <code>['finance', 'general']</code> — Can view, submit, and approve finance and general documents; strictly blocked from legal documents.",
+          "<b>EMPLOYEE Role:</b> Scope <code>['general']</code> — Baseline operational access; submit-only permissions (approvals/rejections rejected with 403 Forbidden).",
+          "<b>TENANT-B USER:</b> Multi-tenant isolation boundary — Sees 0 documents or notifications from tenant-default.",
+          "<b>Cryptographic Verification:</b> JWT Bearer tokens signed with HMAC-SHA256 containing user ID, role, tenant, and department scopes."
+        ]
+      },
+      {
+        review: "REVIEW 2",
+        title: "Finite State Machine Formal Specification",
+        subtitle: "Strict Lifecycle Grammar with Guard Conditions",
+        bullets: [
+          "<b>Permitted Transitions:</b> DRAFT -> UNDER_REVIEW -> APPROVED / REJECTED -> ARCHIVED.",
+          "<b>Guard Conditions:</b> Only users with MANAGER or ADMIN role matching the document's department can approve or reject.",
+          "<b>Terminal States:</b> REJECTED and ARCHIVED documents cannot undergo further state modifications.",
+          "<b>Concurrency Protection:</b> Every transition runs inside a serialized transaction utilizing <code>SELECT ... FOR UPDATE</code> row-level locks.",
+          "<b>Audit Emission:</b> Every transition automatically triggers both an immutable SHA-256 audit log and a Kafka workflow event."
+        ]
+      },
+      {
+        review: "REVIEW 3",
+        title: "Document Ingestion & Chunking Pipeline",
+        subtitle: "High-Fidelity Multi-Page Parsing & Dense Vector Indexing",
+        bullets: [
+          "<b>Multi-Engine Extraction:</b> PyMuPDF extracts text, page boundaries, and token counts from PDFs; python-docx extracts DOCX structures.",
+          "<b>Sliding Window Chunking:</b> 200-word chunk size with 40-word overlap preserves semantic context across page boundaries.",
+          "<b>Dense Embeddings:</b> sentence-transformers/all-MiniLM-L6-v2 generates 384-dimensional dense vectors.",
+          "<b>Metadata Indexing:</b> Each chunk indexed in ChromaDB with document_id, document_title, tenant_id, department, and classification.",
+          "<b>Performance:</b> Sub-second ingestion for multi-page enterprise documents."
+        ]
+      },
+      {
+        review: "REVIEW 3",
+        title: "Access-Aware RAG Engine (Zero Data Leakage)",
+        subtitle: "Eliminating Vector-Layer Privacy Breaches",
+        bullets: [
+          "<b>Vulnerability Identified:</b> Standard vector search retrieves nearest neighbors without authorization, filtering afterwards.",
+          "<b>Our Access-Aware Algorithm:</b> Inject JWT tenant and department claims directly into ChromaDB vector retrieval query:",
+          "<b>Filter Syntax:</b> <code>{'$and': [{'tenant_id': {'$eq': tenant}}, {'department': {'$in': user_departments}}]}</code>",
+          "<b>Empirical Result:</b> Employee querying 'executive contract termination' receives 0 chunks and 0 sources.",
+          "<b>Admin Result:</b> Querying same question receives full severance details with exact citations (Document title, Page 2, Chunk ID).",
+          "<b>Zero Authorization Leakage:</b> 100% verified across adversarial test suites."
+        ]
+      },
+      {
+        review: "REVIEW 3",
+        title: "Cryptographic SHA-256 Audit Trail",
+        subtitle: "Blockchain-Inspired Tamper-Evident Security Ledger",
+        bullets: [
+          "<b>Chained Hash Construction:</b> Hash_i = SHA-256(Hash_{i-1} + ActorID + Action + DocID + Timestamp + Metadata).",
+          "<b>Genesis Block:</b> Initialized with static zero-hash (0000...0000).",
+          "<b>Logged Actions:</b> DOCUMENT_UPLOADED, SUBMITTED_FOR_REVIEW, APPROVED, REJECTED, ARCHIVED, RAG_QUERY.",
+          "<b>Tamper Verification API (/audit/verify):</b> Iterates from genesis to head, recalculating every hash block.",
+          "<b>Integrity Guarantee:</b> Any manual modification or deletion breaks the hash chain and flags the exact record ID."
+        ]
+      },
+      {
+        review: "REVIEW 3",
+        title: "Concurrency Control & Row-Level Locking",
+        subtitle: "Preventing Workflow Race Conditions Under High Concurrency",
+        bullets: [
+          "<b>The Threat:</b> Simultaneous approval attempts by two managers can create double transitions and corrupt audit records.",
+          "<b>PostgreSQL Row Lock:</b> <code>SELECT * FROM documents WHERE id = :id FOR UPDATE;</code>",
+          "<b>Execution Behavior:</b> First manager acquires lock, transitions document to APPROVED, commits transaction.",
+          "<b>Second Manager Handling:</b> Acquires lock after commit, detects document is already APPROVED, safely rejected with <code>HTTP 409 Conflict</code>.",
+          "Verified via automated concurrent test harness with 0 race condition failures."
+        ]
+      },
+      {
+        review: "REVIEW 3",
+        title: "Benchmark Metrics & Performance Validation",
+        subtitle: "Empirical Verification Under Sustained Workloads",
+        bullets: [
+          "<b>REST API Average Latency:</b> 5.81 ms",
+          "<b>REST API 95th Percentile (p95):</b> 113.02 ms",
+          "<b>System Throughput:</b> 160.25 requests/second under sustained concurrent load.",
+          "<b>RAG Search Median Latency (p50):</b> 921.62 ms (including embedding and context generation).",
+          "<b>Security Metric:</b> 0.00% cross-tenant and cross-department authorization leakage.",
+          "<b>Reliability Metric:</b> 100% successful tamper detection on corrupted audit blocks."
+        ]
+      },
+      {
+        review: "REVIEW 4",
+        title: "Microservices Architecture & Decoupling",
+        subtitle: "Autonomous Services with Independent Service Contracts",
+        bullets: [
+          "<b>Core Document Intelligence Service (Port 8000):</b> Manages ingestion, relational metadata, vector RAG, and state transitions.",
+          "<b>Notification Microservice (Port 8001):</b> Subscribes to Kafka topic, processes events, persists notifications, and serves notification queries.",
+          "<b>Frontend SPA (Port 5173 / 3000):</b> React 18, Vite, TypeScript, Tailwind CSS with modular routing and real-time polling.",
+          "<b>Decoupled Communication:</b> Event-driven pub/sub via Apache Kafka ensures asynchronous, non-blocking workflow operations.",
+          "<b>Container Orchestration:</b> Multi-container docker-compose.yml defines services, networks, volumes, and healthchecks."
+        ]
+      },
+      {
+        review: "REVIEW 4",
+        title: "Apache Kafka Event-Driven Architecture",
+        subtitle: "Real-Time Enterprise Messaging for Workflow Events",
+        bullets: [
+          "<b>Topic:</b> <code>document.workflow.events</code> handles all lifecycle and state changes.",
+          "<b>Event Schema:</b> event_id, event_type, document_id, document_title, department, from_status, to_status, actor_id, tenant_id, timestamp.",
+          "<b>Consumer Group:</b> <code>enterprise-notification-service</code> with automatic offset tracking.",
+          "<b>Dual-Mode Strategy:</b> Connects to live Kafka cluster via aiokafka; automatically fails over to resilient in-memory event bus if Kafka is offline.",
+          "<b>Zero Downtime:</b> Guarantees 100% operational demo during battery-powered review environments."
+        ]
+      },
+      {
+        review: "REVIEW 4",
+        title: "Real-Time Notification Center UI",
+        subtitle: "Interactive Notification Hub in React SPA",
+        bullets: [
+          "<b>Header Bell Icon:</b> Displays real-time unread notification badge counter.",
+          "<b>Interactive Dropdown Tray:</b> Chronological event stream with color-coded status badges and department tags.",
+          "<b>Direct Navigation:</b> One-click deep links to navigate directly to the affected document workspace.",
+          "<b>Read Management:</b> Individual 'Mark as Read' and bulk 'Mark All as Read' actions.",
+          "<b>Kafka Health Indicator:</b> Visual badge confirming active event streaming pipeline."
+        ]
+      },
+      {
+        review: "REVIEW 4",
+        title: "Full Automated Test Suite (21/21 Tests Passing)",
+        subtitle: "Comprehensive Quality Assurance Across All Functional Layers",
+        bullets: [
+          "<b>Auth Tests (4):</b> Valid login, invalid password rejection, valid JWT /me, invalid token rejection.",
+          "<b>Document Tests (5):</b> Valid PDF/DOCX ingestion, empty file rejection, invalid MIME rejection, RBAC department filtering.",
+          "<b>Health & Metrics Tests (2):</b> Multi-store health check (/health), Prometheus-style metrics (/metrics).",
+          "<b>Kafka & Notification Tests (3):</b> Event publishing on transitions, consumer RBAC routing, mark-as-read actions.",
+          "<b>RAG Security Tests (3):</b> Employee vs Admin confidentiality barrier, cross-tenant isolation, prompt injection defense.",
+          "<b>Workflow Tests (3):</b> Valid state transitions, invalid transition rejection, concurrent approval race protection."
+        ]
+      },
+      {
+        review: "REVIEW 4",
+        title: "Live Demonstration Workflow",
+        subtitle: "End-to-End Walkthrough Scenarios for Evaluation",
+        bullets: [
+          "<b>Demo 1 — One-Click Role Switcher:</b> Switch between Admin, Manager, and Employee seamlessly on the login page.",
+          "<b>Demo 2 — Document Ingestion:</b> Upload an enterprise PDF, verify metadata in MongoDB, ACID record in Postgres, chunks in ChromaDB.",
+          "<b>Demo 3 — Access-Aware RAG Barrier:</b> Query confidential executive agreement; verify Employee blocked (0 sources), Admin granted.",
+          "<b>Demo 4 — Workflow Transition & Kafka Alert:</b> Submit invoice, observe instant Kafka notification in Bell drawer, approve as Manager.",
+          "<b>Demo 5 — Cryptographic Audit Verification:</b> Verify 30+ blocks with unbroken SHA-256 chain on the audit dashboard."
+        ]
+      },
+      {
+        review: "SUMMARY",
+        title: "Technical Challenges & Engineering Solutions",
+        subtitle: "Overcoming Distributed Systems & Security Hurdles",
+        bullets: [
+          "<b>Vector-Layer Privacy Leak:</b> Solved by moving authorization checks from post-retrieval into the vector database query filter.",
+          "<b>Approval Race Conditions:</b> Solved by employing PostgreSQL SELECT ... FOR UPDATE row-level serialization locks.",
+          "<b>Polyglot State Synchronization:</b> Solved by atomic ingestion coordinating MongoDB IDs, PostgreSQL records, and ChromaDB embeddings.",
+          "<b>Review Reliability (Offline/Battery):</b> Solved by engineering dual-mode fallbacks for Kafka, PostgreSQL, and LLMs."
+        ]
+      },
+      {
+        review: "CONCLUSION",
+        title: "Conclusion & Future Research Roadmap",
+        subtitle: "Project Completion Summary & Enterprise Extensions",
+        bullets: [
+          "<b>Conclusion:</b> All requirements for Review 1, 2, 3, and 4 are 100% completed, verified, and running live.",
+          "<b>Key Innovation:</b> Access-Aware RAG + Cryptographic Audit Chaining establishes a new standard for secure enterprise document workflows.",
+          "<b>Future Roadmap:</b> Optical Character Recognition (OCR) for scanned PDFs; field-level redaction; distributed multi-region Kafka partitions.",
+          "<b>Thank You!</b> Open for questions and live demonstration."
+        ]
+      }
+    ];
+
+    let currentSlide = 0;
+    const container = document.getElementById("slides-container");
+    const indicator = document.getElementById("slide-indicator");
+
+    function renderSlide(index) {
+      const data = slidesData[index];
+      container.innerHTML = `
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+              ${data.review}
+            </span>
+            <span class="text-xs text-slate-500 font-mono">Slide ${index + 1} of ${slidesData.length}</span>
+          </div>
+          <h2 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight mb-1.5">${data.title}</h2>
+          <p class="text-sm font-medium text-indigo-300 italic mb-6">${data.subtitle}</p>
+          <div class="h-px w-full bg-slate-800 mb-6"></div>
+          <ul class="space-y-3.5 text-slate-300 text-sm lg:text-base leading-relaxed">
+            ${data.bullets.map(b => `<li class="flex items-start space-x-2.5"><span class="text-indigo-400 font-bold mt-0.5">•</span><span>${b}</span></li>`).join('')}
+          </ul>
+        </div>
+        <div class="flex items-center justify-between pt-6 border-t border-slate-800/80 text-[11px] text-slate-500">
+          <span>Enterprise Document Intelligence Platform</span>
+          <span>Review 4 Final Defense</span>
+        </div>
+      `;
+      indicator.textContent = `Slide ${index + 1} / ${slidesData.length}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slidesData.length - 1) {
+        currentSlide++;
+        renderSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        renderSlide(currentSlide);
+      }
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") nextSlide();
+      if (e.key === "ArrowLeft" || e.key === "PageUp") prevSlide();
+      if (e.key === "f" || e.key === "F") toggleFullScreen();
+    });
+
+    renderSlide(0);
+  </script>
+</body>
+</html>

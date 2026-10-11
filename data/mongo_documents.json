@@ -1,0 +1,723 @@
+[
+  {
+    "document_id": "DOC-05527410",
+    "title": "Vendor Master Services Agreement",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "ABC Technologies",
+    "tags": [
+      "contract",
+      "vendor"
+    ],
+    "custom_fields": {
+      "renewal_period": "12 months",
+      "risk_level": "medium"
+    },
+    "created_at": "2026-09-23T08:39:11.065000",
+    "page_count": 2,
+    "raw_character_count": 936
+  },
+  {
+    "document_id": "DOC-14849901",
+    "title": "Global Employee Workplace Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "HR Department",
+    "tags": [
+      "hr",
+      "policy"
+    ],
+    "custom_fields": {
+      "effective_date": "2026-10-01",
+      "pto_days": 20
+    },
+    "created_at": "2026-09-23T08:39:11.792000",
+    "page_count": 2,
+    "raw_character_count": 709
+  },
+  {
+    "document_id": "DOC-C4DA526D",
+    "title": "Q3 Enterprise Infrastructure Invoice",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "CloudScale Infrastructure Corp",
+    "tags": [
+      "invoice",
+      "finance",
+      "q3"
+    ],
+    "custom_fields": {
+      "amount": "$148,500.00",
+      "payment_terms": "Net 45"
+    },
+    "created_at": "2026-09-23T08:39:12.314000",
+    "page_count": 2,
+    "raw_character_count": 649
+  },
+  {
+    "document_id": "DOC-67CE4908",
+    "title": "Corporate Information Security Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "IT & SecOps",
+    "tags": [
+      "security",
+      "it",
+      "compliance"
+    ],
+    "custom_fields": {
+      "min_password_length": 14,
+      "mfa_required": true
+    },
+    "created_at": "2026-09-23T08:39:12.784000",
+    "page_count": 2,
+    "raw_character_count": 714
+  },
+  {
+    "document_id": "DOC-A1E849BC",
+    "title": "Executive Employment Agreement - Confidential",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "Board Compensation Committee",
+    "tags": [
+      "executive",
+      "contract",
+      "confidential"
+    ],
+    "custom_fields": {
+      "severance_months": 18,
+      "equity_acceleration": true,
+      "risk_level": "critical"
+    },
+    "created_at": "2026-09-23T08:39:13.233000",
+    "page_count": 2,
+    "raw_character_count": 992
+  },
+  {
+    "document_id": "DOC-22F0C434",
+    "title": "Vendor Master Services Agreement",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "ABC Technologies",
+    "tags": [
+      "contract",
+      "vendor"
+    ],
+    "custom_fields": {
+      "renewal_period": "12 months",
+      "risk_level": "medium"
+    },
+    "created_at": "2026-09-23T08:42:23.363000",
+    "page_count": 2,
+    "raw_character_count": 936
+  },
+  {
+    "document_id": "DOC-F6557869",
+    "title": "Global Employee Workplace Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "HR Department",
+    "tags": [
+      "hr",
+      "policy"
+    ],
+    "custom_fields": {
+      "effective_date": "2026-10-01",
+      "pto_days": 20
+    },
+    "created_at": "2026-09-23T08:42:24.138000",
+    "page_count": 2,
+    "raw_character_count": 709
+  },
+  {
+    "document_id": "DOC-27462401",
+    "title": "Q3 Enterprise Infrastructure Invoice",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "CloudScale Infrastructure Corp",
+    "tags": [
+      "invoice",
+      "finance",
+      "q3"
+    ],
+    "custom_fields": {
+      "amount": "$148,500.00",
+      "payment_terms": "Net 45"
+    },
+    "created_at": "2026-09-23T08:42:24.525000",
+    "page_count": 2,
+    "raw_character_count": 649
+  },
+  {
+    "document_id": "DOC-DDEF4C25",
+    "title": "Corporate Information Security Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "IT & SecOps",
+    "tags": [
+      "security",
+      "it",
+      "compliance"
+    ],
+    "custom_fields": {
+      "min_password_length": 14,
+      "mfa_required": true
+    },
+    "created_at": "2026-09-23T08:42:24.926000",
+    "page_count": 2,
+    "raw_character_count": 714
+  },
+  {
+    "document_id": "DOC-636ACFCB",
+    "title": "Executive Employment Agreement - Confidential",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "Board Compensation Committee",
+    "tags": [
+      "executive",
+      "contract",
+      "confidential"
+    ],
+    "custom_fields": {
+      "severance_months": 18,
+      "equity_acceleration": true,
+      "risk_level": "critical"
+    },
+    "created_at": "2026-09-23T08:42:25.308000",
+    "page_count": 2,
+    "raw_character_count": 992
+  },
+  {
+    "document_id": "DOC-689AD6FC",
+    "title": "Kafka Verification Doc",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:51:00.661000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-7C7343EB",
+    "title": "Restricted Legal Acquisition",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:51:04.851000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-D64D63F0",
+    "title": "State Progression Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:51:14.794000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-39DF4EC4",
+    "title": "Invalid Transition Test",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:51:16.096000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-2E3C39C3",
+    "title": "Concurrency Protection Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:51:17.414000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-D3112595",
+    "title": "Vendor Master Services Agreement",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "ABC Technologies",
+    "tags": [
+      "contract",
+      "vendor"
+    ],
+    "custom_fields": {
+      "renewal_period": "12 months",
+      "risk_level": "medium"
+    },
+    "created_at": "2026-10-05T03:54:41.789000",
+    "page_count": 2,
+    "raw_character_count": 936
+  },
+  {
+    "document_id": "DOC-851388DD",
+    "title": "Global Employee Workplace Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "HR Department",
+    "tags": [
+      "hr",
+      "policy"
+    ],
+    "custom_fields": {
+      "effective_date": "2026-10-01",
+      "pto_days": 20
+    },
+    "created_at": "2026-10-05T03:54:43.091000",
+    "page_count": 2,
+    "raw_character_count": 709
+  },
+  {
+    "document_id": "DOC-678ECBA1",
+    "title": "Q3 Enterprise Infrastructure Invoice",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "CloudScale Infrastructure Corp",
+    "tags": [
+      "invoice",
+      "finance",
+      "q3"
+    ],
+    "custom_fields": {
+      "amount": "$148,500.00",
+      "payment_terms": "Net 45"
+    },
+    "created_at": "2026-10-05T03:54:43.788000",
+    "page_count": 2,
+    "raw_character_count": 649
+  },
+  {
+    "document_id": "DOC-59206B48",
+    "title": "Corporate Information Security Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "IT & SecOps",
+    "tags": [
+      "security",
+      "it",
+      "compliance"
+    ],
+    "custom_fields": {
+      "min_password_length": 14,
+      "mfa_required": true
+    },
+    "created_at": "2026-10-05T03:54:44.608000",
+    "page_count": 2,
+    "raw_character_count": 714
+  },
+  {
+    "document_id": "DOC-91C7275C",
+    "title": "Executive Employment Agreement - Confidential",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "Board Compensation Committee",
+    "tags": [
+      "executive",
+      "contract",
+      "confidential"
+    ],
+    "custom_fields": {
+      "severance_months": 18,
+      "equity_acceleration": true,
+      "risk_level": "critical"
+    },
+    "created_at": "2026-10-05T03:54:45.708000",
+    "page_count": 2,
+    "raw_character_count": 992
+  },
+  {
+    "document_id": "DOC-51BA94AF",
+    "title": "Kafka Verification Doc",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:57:40.259000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-FD1D1863",
+    "title": "Restricted Legal Acquisition",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:57:44.870000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-4E1ECFB8",
+    "title": "State Progression Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:57:54.981000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-22DD59D1",
+    "title": "Invalid Transition Test",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:57:56.500000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-55B4D57B",
+    "title": "Concurrency Protection Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-05T03:57:57.747000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-1EB0D535",
+    "title": "Kafka Verification Doc",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-06T05:41:31.641000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-E1B3CBB3",
+    "title": "Restricted Legal Acquisition",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-06T05:41:36.427000",
+    "page_count": 1,
+    "raw_character_count": 58
+  },
+  {
+    "document_id": "DOC-1A6BED5B",
+    "title": "State Progression Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-06T05:41:46.793000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-86E45706",
+    "title": "Invalid Transition Test",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-06T05:41:48.359000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-8E8B571A",
+    "title": "Concurrency Protection Doc",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-06T05:41:49.713000",
+    "page_count": 1,
+    "raw_character_count": 34
+  },
+  {
+    "document_id": "DOC-1A56DAE9",
+    "title": "Vendor Master Services Agreement",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "ABC Technologies",
+    "tags": [
+      "contract",
+      "vendor"
+    ],
+    "custom_fields": {
+      "renewal_period": "12 months",
+      "risk_level": "medium"
+    },
+    "created_at": "2026-10-11T16:36:15.050000",
+    "page_count": 2,
+    "raw_character_count": 936
+  },
+  {
+    "document_id": "DOC-A415A0ED",
+    "title": "Global Employee Workplace Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "HR Department",
+    "tags": [
+      "hr",
+      "policy"
+    ],
+    "custom_fields": {
+      "effective_date": "2026-10-01",
+      "pto_days": 20
+    },
+    "created_at": "2026-10-11T16:36:16.014000",
+    "page_count": 2,
+    "raw_character_count": 709
+  },
+  {
+    "document_id": "DOC-B2B4999F",
+    "title": "Q3 Enterprise Infrastructure Invoice",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "CloudScale Infrastructure Corp",
+    "tags": [
+      "invoice",
+      "finance",
+      "q3"
+    ],
+    "custom_fields": {
+      "amount": "$148,500.00",
+      "payment_terms": "Net 45"
+    },
+    "created_at": "2026-10-11T16:36:16.571000",
+    "page_count": 2,
+    "raw_character_count": 649
+  },
+  {
+    "document_id": "DOC-81768B62",
+    "title": "Corporate Information Security Policy",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "IT & SecOps",
+    "tags": [
+      "security",
+      "it",
+      "compliance"
+    ],
+    "custom_fields": {
+      "min_password_length": 14,
+      "mfa_required": true
+    },
+    "created_at": "2026-10-11T16:36:17.273000",
+    "page_count": 2,
+    "raw_character_count": 714
+  },
+  {
+    "document_id": "DOC-B36F76CE",
+    "title": "Executive Employment Agreement - Confidential",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "Board Compensation Committee",
+    "tags": [
+      "executive",
+      "contract",
+      "confidential"
+    ],
+    "custom_fields": {
+      "severance_months": 18,
+      "equity_acceleration": true,
+      "risk_level": "critical"
+    },
+    "created_at": "2026-10-11T16:36:18.053000",
+    "page_count": 2,
+    "raw_character_count": 992
+  },
+  {
+    "document_id": "DOC-F6703274",
+    "title": "Mutual Non-Disclosure Agreement (NDA)",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "Corporate Legal Counsel",
+    "tags": [
+      "legal",
+      "nda",
+      "confidential",
+      "intellectual-property"
+    ],
+    "custom_fields": {
+      "term_years": 3,
+      "dispute_resolution": "Arbitration",
+      "jurisdiction": "New York"
+    },
+    "created_at": "2026-10-11T16:38:09.129000",
+    "page_count": 1,
+    "raw_character_count": 993
+  },
+  {
+    "document_id": "DOC-291F153C",
+    "title": "Enterprise Employee Onboarding Handbook",
+    "department": "hr",
+    "classification": "internal",
+    "vendor": "Global Talent Team",
+    "tags": [
+      "hr",
+      "onboarding",
+      "benefits",
+      "probation"
+    ],
+    "custom_fields": {
+      "probation_period_months": 3,
+      "health_plan": "Tier 1 Comprehensive",
+      "relocation_assistance": true
+    },
+    "created_at": "2026-10-11T16:38:09.737000",
+    "page_count": 1,
+    "raw_character_count": 926
+  },
+  {
+    "document_id": "DOC-684DBCD3",
+    "title": "FY2027 Capital Expenditure Budget Forecast",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "Financial Planning & Analysis (FP&A)",
+    "tags": [
+      "finance",
+      "budget",
+      "capex",
+      "forecasting"
+    ],
+    "custom_fields": {
+      "fiscal_year": 2027,
+      "total_budget": "$12,400,000",
+      "approved_by_board": true
+    },
+    "created_at": "2026-10-11T16:38:10.287000",
+    "page_count": 2,
+    "raw_character_count": 678
+  },
+  {
+    "document_id": "DOC-45D1B97F",
+    "title": "API Zero-Trust Architecture Guidelines",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Application Security Team",
+    "tags": [
+      "engineering",
+      "api",
+      "zero-trust",
+      "jwt",
+      "mtls"
+    ],
+    "custom_fields": {
+      "auth_protocol": "OAuth 2.1 / OIDC",
+      "token_ttl_seconds": 3600,
+      "rate_limit_rps": 500
+    },
+    "created_at": "2026-10-11T16:38:11.099000",
+    "page_count": 1,
+    "raw_character_count": 587
+  },
+  {
+    "document_id": "DOC-E2145B31",
+    "title": "Legacy Monolith Decommissioning Audit 2025",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Enterprise Architecture Office",
+    "tags": [
+      "engineering",
+      "legacy",
+      "audit",
+      "decommissioned"
+    ],
+    "custom_fields": {
+      "decommission_year": 2025,
+      "servers_retired": 140,
+      "archived_by": "lead-arch@enterprise.com"
+    },
+    "created_at": "2026-10-11T16:38:11.508000",
+    "page_count": 2,
+    "raw_character_count": 606
+  },
+  {
+    "document_id": "DOC-AB041183",
+    "title": "Vendor Security & Supply-Chain Evaluation",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "Cyber Risk Assessment Group",
+    "tags": [
+      "security",
+      "vendor",
+      "soc2",
+      "audit"
+    ],
+    "custom_fields": {
+      "soc2_type2_required": true,
+      "iso27001_certified": true,
+      "cyber_insurance_min": "$5,000,000"
+    },
+    "created_at": "2026-10-11T16:38:12.134000",
+    "page_count": 1,
+    "raw_character_count": 862
+  },
+  {
+    "document_id": "DOC-95C13152",
+    "title": "SRE Engineering Incident Response Playbook",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Site Reliability Engineering",
+    "tags": [
+      "sre",
+      "incident",
+      "playbook"
+    ],
+    "custom_fields": {
+      "sla_minutes": 15,
+      "oncall": "tier1"
+    },
+    "created_at": "2026-10-11T16:39:49.938000",
+    "page_count": 1,
+    "raw_character_count": 929
+  },
+  {
+    "document_id": "DOC-6869DBD2",
+    "title": "Project Alpha Quantum Cryptography Specification",
+    "department": "engineering",
+    "classification": "restricted",
+    "vendor": "Advanced Quantum Research",
+    "tags": [
+      "project-alpha",
+      "cryptography",
+      "restricted"
+    ],
+    "custom_fields": {
+      "canary_token": "ALPHA-CANARY-9034",
+      "clearance": "Level 4"
+    },
+    "created_at": "2026-10-11T16:39:50.322000",
+    "page_count": 1,
+    "raw_character_count": 746
+  }
+]
