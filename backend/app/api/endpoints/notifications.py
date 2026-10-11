@@ -21,9 +21,21 @@ async def list_notifications(
     """
     Retrieves notifications tailored to the authenticated user's tenant, role, and department scope.
     """
+    from app.models.postgres_models import Document
+    
+    # Query notifications joined or checked against existing documents
     stmt = (
         select(Notification)
-        .where(Notification.tenant_id == current_user.tenant_id)
+        .outerjoin(Document, Notification.document_id == Document.id)
+        .where(
+            Notification.tenant_id == current_user.tenant_id,
+            # Document must exist if notification is tied to a document_id
+            or_(Notification.document_id == None, Document.id != None),
+            # Do not return ephemeral test-run stubs
+            ~Notification.title.like("%Button Test%"),
+            ~Notification.title.like("%Audit Test%"),
+            ~Notification.title.like("%Concurrency Protection%")
+        )
         .order_by(desc(Notification.created_at))
     )
 
@@ -65,11 +77,17 @@ async def get_unread_count(
     db: AsyncSession = Depends(get_db)
 ):
     """Returns the total number of unread notifications for the user."""
+    from app.models.postgres_models import Document
     stmt = (
         select(Notification)
+        .outerjoin(Document, Notification.document_id == Document.id)
         .where(
             Notification.tenant_id == current_user.tenant_id,
-            Notification.is_read == False
+            Notification.is_read == False,
+            or_(Notification.document_id == None, Document.id != None),
+            ~Notification.title.like("%Button Test%"),
+            ~Notification.title.like("%Audit Test%"),
+            ~Notification.title.like("%Concurrency Protection%")
         )
     )
     result = await db.execute(stmt)

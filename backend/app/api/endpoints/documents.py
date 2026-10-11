@@ -1,7 +1,7 @@
 import json
 from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
-from sqlalchemy import select, desc
+from sqlalchemy import select, desc, delete
 from sqlalchemy.orm import selectinload
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -314,7 +314,11 @@ async def delete_document(
         metadata_info={"title": doc.title}
     )
 
-    # 4. Delete PostgreSQL record (cascades to chunks & access_policies)
+    # 4. Delete associated notifications
+    from app.models.postgres_models import Notification
+    await db.execute(delete(Notification).where(Notification.document_id == document_id))
+
+    # 5. Delete PostgreSQL record (cascades to chunks & access_policies)
     await db.delete(doc)
     await db.commit()
 
