@@ -5,8 +5,13 @@ from typing import AsyncGenerator
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy import text
 from motor.motor_asyncio import AsyncIOMotorClient
-import chromadb
-from chromadb.config import Settings as ChromaSettings
+
+try:
+    import chromadb
+    from chromadb.config import Settings as ChromaSettings
+except ImportError:
+    chromadb = None
+    ChromaSettings = None
 
 from app.core.config import settings
 from app.models.postgres_models import Base, Role
@@ -327,6 +332,10 @@ def get_chroma_client():
     if _chroma_client is not None:
         return _chroma_client
 
+    if chromadb is None:
+        logger.info("ChromaDB is not installed; relying on native PostgreSQL pgvector.")
+        return None
+
     try:
         if settings.CHROMA_HOST and settings.CHROMA_HOST not in ("localhost", "127.0.0.1"):
             client = chromadb.HttpClient(
@@ -341,17 +350,27 @@ def get_chroma_client():
     except Exception as e:
         logger.info(f"ChromaDB HTTP Server not reachable ({e}), using PersistentClient.")
 
-    _chroma_client = chromadb.PersistentClient(
-        path=str(CHROMA_DIR),
-        settings=ChromaSettings(anonymized_telemetry=False)
-    )
-    logger.info(f"Using ChromaDB PersistentClient at {CHROMA_DIR}")
-    return _chroma_client
+    try:
+        _chroma_client = chromadb.PersistentClient(
+            path=str(CHROMA_DIR),
+            settings=ChromaSettings(anonymized_telemetry=False)
+        )
+        logger.info(f"Using ChromaDB PersistentClient at {CHROMA_DIR}")
+        return _chroma_client
+    except Exception as e:
+        logger.warning(f"Could not initialize ChromaDB PersistentClient: {e}")
+        return None
 
 
 def get_chroma_collection(collection_name: str = "document_chunks"):
     client = get_chroma_client()
-    return client.get_or_create_collection(
-        name=collection_name,
-        metadata={"hnsw:space": "cosine"}
-    )
+    if client is None:
+        return None
+    try:
+        return client.get_or_create_collection(
+            name=collection_name,
+            metadata={"hnsw:space": "cosine"}
+        )
+    except Exception as e:
+        logger.warning(f"Failed to get or create Chroma collection: {e}")
+        return None

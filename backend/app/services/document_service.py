@@ -15,14 +15,7 @@ from sqlalchemy import func
 
 logger = logging.getLogger(__name__)
 
-_embedding_model = None
-
-def get_embedding_model():
-    global _embedding_model
-    if _embedding_model is None:
-        from sentence_transformers import SentenceTransformer
-        _embedding_model = SentenceTransformer(settings.EMBEDDING_MODEL)
-    return _embedding_model
+from app.core.embeddings import encode_text
 
 def extract_text_from_file(filename: str, content: bytes) -> List[Tuple[int, str]]:
     """Extracts text page-by-page from PDF, DOCX, TXT, or Markdown. Returns list of (page_num, text)."""
@@ -164,13 +157,12 @@ async def ingest_document(
     # 5. Chunking & PostgreSQL pgvector Ingestion
     chunks = chunk_text(pages)
     if chunks:
-        model = get_embedding_model()
         chunk_texts = [c["text"] for c in chunks]
-        embeddings = model.encode(chunk_texts, show_progress_bar=False)
+        embeddings = encode_text(chunk_texts, dim=384)
 
         for idx, c in enumerate(chunks):
             c["chunk_id"] = f"{doc_id}-P{c['page']}-{c['chunk_seq']}"
-            c["embedding"] = embeddings[idx].tolist()
+            c["embedding"] = embeddings[idx]
 
             pg_chunk = DocumentChunk(
                 id=c["chunk_id"],

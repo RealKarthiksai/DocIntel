@@ -40,11 +40,14 @@ async def get_health(db: AsyncSession = Depends(get_db)):
     except Exception as e:
         mongodb_status = f"unhealthy: {str(e)}"
 
-    # 3. Check ChromaDB
+    # 3. Check ChromaDB / pgvector
     try:
         chroma = get_chroma_client()
-        hb = chroma.heartbeat()
-        chromadb_status = f"connected (heartbeat: {hb})"
+        if chroma:
+            hb = chroma.heartbeat()
+            chromadb_status = f"connected (heartbeat: {hb})"
+        else:
+            chromadb_status = "pgvector native mode (standalone)"
     except Exception as e:
         chromadb_status = f"unhealthy: {str(e)}"
 

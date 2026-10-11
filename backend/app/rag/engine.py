@@ -21,14 +21,7 @@ Security Rules:
 5. Provide exact citations (document title and page number) when stating facts.
 """
 
-_embedding_model = None
-
-def get_embedding_model():
-    global _embedding_model
-    if _embedding_model is None:
-        from sentence_transformers import SentenceTransformer
-        _embedding_model = SentenceTransformer(settings.EMBEDDING_MODEL)
-    return _embedding_model
+from app.core.embeddings import encode_text
 
 
 def extract_grounded_answer(query: str, chunks: List[Dict[str, Any]]) -> Optional[str]:
@@ -140,8 +133,7 @@ async def execute_postgres_rbac_rag(
         )
 
     # 1. Generate 384-dimensional query vector embedding
-    model = get_embedding_model()
-    query_vec = model.encode(query, show_progress_bar=False).tolist()
+    query_vec = encode_text(query, dim=384)
     vec_str = "[" + ",".join(str(x) for x in query_vec) + "]"
 
     user_dept = user.department.lower() if user.department else "general"

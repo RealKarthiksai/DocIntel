@@ -35,7 +35,10 @@ async def lifespan(app: FastAPI):
 
     try:
         chroma = get_chroma_client()
-        logger.info(f"ChromaDB client heartbeat: {chroma.heartbeat()}")
+        if chroma:
+            logger.info(f"ChromaDB client heartbeat: {chroma.heartbeat()}")
+        else:
+            logger.info("ChromaDB client inactive. Operating in pure pgvector mode.")
     except Exception as e:
         logger.warning(f"ChromaDB initialization notice: {e}")
 
