@@ -25,9 +25,12 @@ CHROMA_DIR = DATA_DIR / "chromadb"
 PG_DATA_DIR = DATA_DIR / "embedded_pg"
 UPLOAD_DIR = DATA_DIR / "uploads"
 
-CHROMA_DIR.mkdir(parents=True, exist_ok=True)
-PG_DATA_DIR.mkdir(parents=True, exist_ok=True)
-UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+try:
+    CHROMA_DIR.mkdir(parents=True, exist_ok=True)
+    PG_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    pass
 
 # -------------------------------------------------------------
 # Embedded Postgres Server Manager
