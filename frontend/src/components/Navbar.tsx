@@ -42,11 +42,19 @@ export const Navbar: React.FC = () => {
   ];
 
   const roleColors: Record<string, string> = {
-    SUPER_ADMIN: "bg-rose-50 text-rose-700 border-rose-200",
+    SUPER_ADMIN: "bg-purple-50 text-purple-700 border-purple-200",
     ADMIN: "bg-purple-50 text-purple-700 border-purple-200",
     MANAGER: "bg-blue-50 text-blue-700 border-blue-200",
     EMPLOYEE: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    VIEWER: "bg-slate-100 text-slate-700 border-slate-200",
+    VIEWER: "bg-amber-50 text-amber-700 border-amber-200",
+  };
+
+  const roleDisplayNames: Record<string, string> = {
+    SUPER_ADMIN: "Admin",
+    ADMIN: "Admin",
+    MANAGER: "Manager",
+    EMPLOYEE: "Contributor",
+    VIEWER: "Auditor",
   };
 
   return (
@@ -118,7 +126,7 @@ export const Navbar: React.FC = () => {
                       <span className={`text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded border leading-none ${
                         roleColors[user.role] || "bg-slate-100 text-slate-700 border-slate-200"
                       }`}>
-                        {user.role}
+                        {roleDisplayNames[user.role] || user.role}
                       </span>
                       <span className="text-[9px] font-mono text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200/80 leading-none">
                         {user.tenant_id}

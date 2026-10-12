@@ -19,13 +19,19 @@ from app.models.postgres_models import Base, Role
 logger = logging.getLogger(__name__)
 
 # Ensure data directories exist
-BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent.parent
-DATA_DIR = BASE_DIR / "data"
+IS_VERCEL = bool(os.getenv("VERCEL"))
+if IS_VERCEL:
+    DATA_DIR = pathlib.Path("/tmp/docintel_data")
+else:
+    BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent.parent
+    DATA_DIR = BASE_DIR / "data"
+
 CHROMA_DIR = DATA_DIR / "chromadb"
 PG_DATA_DIR = DATA_DIR / "embedded_pg"
 UPLOAD_DIR = DATA_DIR / "uploads"
 
 try:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     PG_DATA_DIR.mkdir(parents=True, exist_ok=True)
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -66,6 +72,10 @@ if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql+asyncpg://", 1)
 elif db_url.startswith("postgresql://") and "+asyncpg" not in db_url:
     db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+
+# asyncpg expects ssl= rather than sslmode=
+if "sslmode=" in db_url:
+    db_url = db_url.replace("sslmode=", "ssl=")
 
 engine = None
 AsyncSessionLocal = None

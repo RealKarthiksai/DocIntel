@@ -1,9 +1,16 @@
+import sys
+import os
 import time
 import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+
+# Ensure backend directory is in sys.path
+backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
 
 from app.core.config import settings
 from app.core.database import init_postgres_db, init_mongo, get_mongo_client, get_chroma_client
