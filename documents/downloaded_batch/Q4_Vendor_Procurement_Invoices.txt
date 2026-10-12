@@ -1,0 +1,53 @@
+NORTHBRIDGE GLOBAL TECHNOLOGIES, INC.
+Q4 2026 VENDOR PROCUREMENT INVOICE SUMMARY
+================================================================
+Document ID:      FIN-AP-2026-Q4-017
+Department:       Finance (Accounts Payable)
+Author:           Daniel Okafor, AP Operations Manager
+Effective Date:   January 12, 2027
+Classification:   INTERNAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This summary consolidates three approved vendor invoices for Q4
+2026 data platform and endpoint security services. Total payable
+across all invoices is $398,550.00 (tax excluded; SaaS exempt in
+applicable jurisdictions).
+
+SECTION 2: INVOICE LINE ITEMS
+----------------------------------------------------------------
+INVOICE INV-2027-891  |  Databricks, Inc.
+  PO Number: PO-77412          Invoice Date: Dec 15, 2026
+  1  Premium Platform Annual Commit (Q4 tranche) .. $150,000.00
+  2  On-Demand DBU Overage (Oct-Dec) ............... $ 34,500.00
+  Invoice Total ................................... $184,500.00
+  Payment Terms: Net 30 (Due Jan 14, 2027)
+
+INVOICE INV-2027-892  |  Snowflake Inc.
+  PO Number: PO-77438          Invoice Date: Dec 18, 2026
+  1  Enterprise Edition Credits: 31,575 @ $4.00 .... $126,300.00
+  Invoice Total ................................... $126,300.00
+  Payment Terms: Net 45 (Due Feb 1, 2027)
+
+INVOICE INV-2027-893  |  CrowdStrike, Inc.
+  PO Number: PO-77501          Invoice Date: Dec 20, 2026
+  1  Falcon Enterprise: 1,950 endpoints @ $45.00 ... $ 87,750.00
+  Invoice Total ................................... $ 87,750.00
+  Payment Terms: Net 30 (Due Jan 19, 2027)
+
+SUMMARY
+  Total Invoiced .................................. $398,550.00
+  Early-Pay Discount Eligible (2/10 Net 30 on 893)  $  1,755.00
+
+SECTION 3: GOVERNANCE & APPROVALS
+----------------------------------------------------------------
+  - Three-way match (PO, receipt, invoice) completed for all items.
+  - Invoices above $100,000 require dual approval: Budget Owner
+    and Director of Finance. INV-2027-891 and INV-2027-892 satisfy
+    this requirement.
+  - Payments are released via ACH on the due date unless early-pay
+    discounts are approved by the Controller.
+  - Records retained for 7 years per corporate retention policy.
+
+Approval Reference: APR-AP-2027-0044

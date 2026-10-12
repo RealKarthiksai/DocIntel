@@ -1,0 +1,64 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+================================================================
+Agreement No.:    NDA-2027-0215
+Parties:          Northbridge Global Technologies, Inc.
+                  Vantage Ridge Partners, LP
+Department:       Legal
+Author:           Rachel Kim, Associate General Counsel
+Effective Date:   February 1, 2027
+Classification:   RESTRICTED
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+The parties intend to evaluate a potential strategic transaction
+("Project Halcyon") and will exchange non-public information
+during due diligence. This Agreement sets the terms under which
+each party may use and must protect that information.
+
+Term: Two (2) years from the Effective Date. Confidentiality
+obligations survive for five (5) years after termination; trade
+secrets remain protected for as long as they qualify as such.
+
+SECTION 2: CONFIDENTIAL INFORMATION & OBLIGATIONS
+----------------------------------------------------------------
+2.1 Definition. "Confidential Information" means all financial,
+    technical, customer, product-roadmap, and personnel data
+    disclosed in any form, whether or not marked confidential,
+    including the existence and status of Project Halcyon.
+
+2.2 Permitted Use. The Receiving Party shall use Confidential
+    Information solely to evaluate the transaction.
+
+2.3 Standard of Care. The Receiving Party shall protect
+    Confidential Information with at least the same care it uses
+    for its own sensitive data, and no less than reasonable care.
+
+2.4 Exclusions. Obligations do not apply to information that is
+    (a) publicly available through no fault of the Receiving
+    Party, (b) already known without restriction, (c)
+    independently developed, or (d) lawfully received from a
+    third party.
+
+2.5 IP Protection. No license or ownership right is granted.
+    All improvements derived from a party's Confidential
+    Information remain that party's property.
+
+SECTION 3: GOVERNANCE & REMEDIES
+----------------------------------------------------------------
+3.1 Access Controls. Disclosure is limited to named personnel on
+    Schedule A (maximum 12 individuals per party) who are bound by
+    written confidentiality duties. Data room access is logged.
+3.2 Compelled Disclosure. The Receiving Party shall give prompt
+    written notice before disclosing under legal compulsion and
+    shall cooperate with any request for a protective order.
+3.3 Return or Destruction. Within 15 business days of written
+    request, all materials shall be returned or destroyed, with an
+    officer's certificate of compliance.
+3.4 Equitable Relief. Breach may cause irreparable harm; the
+    disclosing party may seek injunctive relief without posting
+    bond.
+3.5 Governing Law. State of Delaware.
+
+Signed: Rachel Kim for Northbridge  |  Authorized signatory for
+Vantage Ridge Partners, LP

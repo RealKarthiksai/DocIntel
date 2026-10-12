@@ -1,0 +1,65 @@
+DATA RETENTION AND RIGHT TO BE FORGOTTEN POLICY
+================================================================
+Document ID:      SEC-PRIV-2027-004
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Security & Compliance (Privacy Office)
+Author:           Isabelle Fournier, Data Protection Officer
+Effective Date:   January 1, 2027
+Classification:   PUBLIC
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This policy sets how long Northbridge retains personal and
+business data and how we honor erasure requests under GDPR
+Article 17 ("right to be forgotten") and similar laws. It applies
+to all employees, contractors, systems, and processors handling
+personal data of individuals in the EU, UK, and other regulated
+regions.
+
+SECTION 2: RETENTION SCHEDULE AND ERASURE WORKFLOW
+----------------------------------------------------------------
+2.1 Retention Schedule
+    Record Type                      Retention Period
+    -------------------------------  -----------------------------
+    Financial and tax records        7 years from fiscal year end
+    Customer contracts               7 years after contract end
+    Employee records                 6 years after termination
+    Recruiting data (unsuccessful)   12 months
+    Application and access logs      400 days
+    Customer document content        Per contract; deleted within
+                                     30 days of termination
+    Marketing consent records        Life of consent plus 3 years
+
+2.2 Erasure Request Workflow
+    1. Intake: Request received via privacy portal or
+       privacy@northbridge.example; logged within 1 business day.
+    2. Identity verification: completed within 5 business days.
+    3. Scoping: Privacy Office maps data across production,
+       analytics, backups, and processors.
+    4. Legal review: Check exemptions under Article 17(3), such as
+       legal claims, regulatory obligations, or legal holds.
+    5. Execution: Erase or irreversibly anonymize data; instruct
+       processors to do the same.
+    6. Confirmation: Written response to the requester within 30
+       days (extendable by up to 2 months for complex requests,
+       with notice).
+
+2.3 Technical Notes
+    - Backups are purged on their normal rotation (maximum 35
+      days); restored data is re-erased before use.
+    - The audit ledger stores only salted hashes, so erasure of the
+      source record cryptographically severs the link without
+      breaking the hash chain.
+
+SECTION 3: GOVERNANCE & CONSTRAINTS
+----------------------------------------------------------------
+    - Active legal holds suspend deletion; the Legal department
+      must document the basis and review it quarterly.
+    - Erasure requests are never denied without written reasons
+      and information on the right to complain to a supervisory
+      authority.
+    - Privacy Office metrics are reported quarterly to the Audit
+      Committee; the 30-day response SLA target is 98%.
+    - Annual training is mandatory for all staff with access to
+      personal data.

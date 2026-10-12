@@ -1,0 +1,15 @@
+INFORMATION SECURITY & PEOPLE OPERATIONS DIRECTIVE
+Topic: Work-From-Anywhere Hardware and Credential Standards
+Distribution: Public Corporate Policy
+
+1. EQUIPMENT REQUIREMENTS
+- Employees must use only company-managed Apple MacBooks or Lenovo ThinkPads enrolled in MDM (Mobile Device Management).
+- Personal computers (BYOD) are strictly prohibited from connecting to corporate GitHub, Jira, and production cloud consoles.
+- Full-disk encryption (FileVault / BitLocker) is mandatory and continuously audited.
+
+2. NETWORK SECURITY
+- Public Wi-Fi networks (airports, cafes) require the mandatory corporate WireGuard VPN tunnel.
+- Household Wi-Fi routers must utilize WPA3 or WPA2-Enterprise encryption with default administrative passwords modified.
+
+3. LOST OR STOLEN DEVICES
+In the event of hardware loss or theft, notify security-incident@company.com within two (2) hours to trigger remote cryptographic wiping.

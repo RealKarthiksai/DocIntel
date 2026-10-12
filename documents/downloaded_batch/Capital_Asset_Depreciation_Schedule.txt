@@ -1,0 +1,54 @@
+NORTHBRIDGE GLOBAL TECHNOLOGIES, INC.
+CAPITAL ASSET DEPRECIATION SCHEDULE - GPU COMPUTE CLUSTER
+================================================================
+Document ID:      FIN-FA-2027-009
+Department:       Finance (Fixed Assets & Tax)
+Author:           Elena Vasquez, Senior Tax Accountant
+Effective Date:   January 2, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This schedule documents tax depreciation for the Q4 2026 purchase
+of 48 GPU servers (Asset Class 00.12, Information Systems),
+placed in service on November 3, 2026. Method: MACRS, 5-year
+property, half-year convention.
+
+Asset Group:       AST-GPU-2026-A
+Quantity:          48 servers
+Unit Cost:         $38,500.00
+Total Cost Basis:  $1,848,000.00
+Location:          Data Center DC-02, Ashburn, VA
+
+SECTION 2: DEPRECIATION TABLE
+----------------------------------------------------------------
+Year   Tax Year   MACRS Rate   Depreciation     Remaining Basis
+----   --------   ----------   --------------   ---------------
+ 1       2026       20.00%      $369,600.00      $1,478,400.00
+ 2       2027       32.00%      $591,360.00      $  887,040.00
+ 3       2028       19.20%      $354,816.00      $  532,224.00
+ 4       2029       11.52%      $212,889.60      $  319,334.40
+ 5       2030       11.52%      $212,889.60      $  106,444.80
+ 6       2031        5.76%      $106,444.80      $        0.00
+                   -------      --------------
+                   100.00%    $1,848,000.00
+
+Notes
+  - Section 179 and bonus depreciation were evaluated and not
+    elected for this asset group; see memo TAX-2026-114.
+  - Book depreciation uses straight-line over 4 years, producing a
+    deferred tax liability tracked in the general ledger.
+
+SECTION 3: GOVERNANCE & APPROVALS
+----------------------------------------------------------------
+  - Capitalization threshold: $5,000 per unit.
+  - Quarterly physical verification required for assets over
+    $25,000 per unit; discrepancies reported to the Controller
+    within 5 business days.
+  - Disposal or relocation requires Fixed Asset Committee approval
+    and updated insurance schedules.
+  - Schedule reviewed annually by external tax advisors.
+
+Approved by: Marcus Hale, Chief Financial Officer
+Approval Reference: APR-FA-2027-0008

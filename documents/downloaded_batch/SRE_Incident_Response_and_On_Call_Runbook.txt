@@ -1,0 +1,66 @@
+SRE INCIDENT RESPONSE AND ON-CALL RUNBOOK
+================================================================
+Document ID:      ENG-SRE-2027-003
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Engineering (Site Reliability)
+Author:           Marcus Tran, SRE Engineering Manager
+Effective Date:   January 5, 2027
+Classification:   INTERNAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This runbook defines how on-call engineers detect, triage,
+mitigate, and communicate during production incidents. It covers
+Severity 1 and Severity 2 events for the DocIntel platform and
+supporting services.
+
+Severity Definitions
+  Sev-1: Full outage, data loss risk, or security breach
+         affecting customers.
+  Sev-2: Major degradation affecting more than 10% of traffic or a
+         key workflow.
+  Sev-3: Minor impact with an available workaround.
+
+SECTION 2: TRIAGE AND RESPONSE PROCEDURES
+----------------------------------------------------------------
+2.1 Sev-1 Timeline
+    T+0 min   Alert fires; primary on-call acknowledges within
+              5 minutes or escalates automatically.
+    T+10 min  Incident Commander (IC) assigned; war-room channel
+              #inc-YYYYMMDD-N opened.
+    T+15 min  First internal status update posted.
+    T+30 min  Customer-facing status page updated; updates every
+              30 minutes thereafter.
+    T+4 hrs   Target mitigation. Escalate to VP Engineering if
+              not mitigated.
+
+2.2 Triage Checklist
+    1. Check recent deployments (last 2 hours) and feature flags.
+    2. Review dashboards: error rate, latency p95, saturation.
+    3. Inspect pod health:
+         kubectl get pods -n prod --field-selector=status.phase!=Running
+    4. Review logs for the failing service:
+         kubectl logs deploy/api-gateway -n prod --since=30m
+
+2.3 Rollback Commands
+    - Kubernetes deployment:
+         kubectl rollout undo deployment/api-gateway -n prod
+         kubectl rollout status deployment/api-gateway -n prod
+    - Helm release:
+         helm history docproc -n prod
+         helm rollback docproc <REVISION> -n prod --wait
+    - Database failover (Postgres HA):
+         patronictl -c /etc/patroni.yml failover --candidate pg-02
+
+SECTION 3: GOVERNANCE & CONSTRAINTS
+----------------------------------------------------------------
+    - Database failover and rollbacks that may cause data loss
+      require IC approval and a second engineer's confirmation.
+    - A blameless post-incident review is due within 5 business
+      days for Sev-1 and 10 for Sev-2; action items are tracked to
+      closure in Jira.
+    - On-call rotation: 7-day shifts, primary and secondary,
+      with compensation of $1,200 per week plus time-off in lieu.
+    - Security incidents must also be reported to the SOC within
+      15 minutes and follow IR-SEC-2027-001.

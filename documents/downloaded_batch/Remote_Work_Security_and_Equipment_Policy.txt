@@ -1,0 +1,59 @@
+NORTHBRIDGE GLOBAL TECHNOLOGIES, INC.
+REMOTE WORK SECURITY AND EQUIPMENT POLICY
+================================================================
+Document ID:      HR-SEC-2027-014
+Department:       Human Resources / IT Security (joint)
+Author:           Kevin Ostrowski, Director of IT Security
+Effective Date:   January 1, 2027
+Classification:   INTERNAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This policy defines the security controls and equipment
+entitlements for employees working remotely, including hybrid and
+remote-first roles. It applies to all company-issued devices and
+any personal device that accesses corporate data.
+
+SECTION 2: EQUIPMENT AND TECHNICAL REQUIREMENTS
+----------------------------------------------------------------
+2.1 Equipment Stipend
+    - One-time home office setup stipend: $1,500
+      (desk, chair, monitor, peripherals).
+    - Annual refresh allowance: $600.
+    - Monthly internet reimbursement: up to $60.
+    - Company laptops are issued by IT; stipend funds may not be
+      used for computing devices.
+
+2.2 Device Requirements
+    - All laptops must be enrolled in Mobile Device Management
+      (MDM) before first use.
+    - Full-disk encryption (FileVault or BitLocker) enforced.
+    - Endpoint detection agent installed and reporting; OS patches
+      applied within 14 days of release (critical: 72 hours).
+    - Screen lock after 5 minutes of inactivity.
+    - Local administrator rights are disabled by default.
+
+2.3 Network Requirements
+    - All access to internal systems must use the company
+      WireGuard VPN with device-certificate authentication.
+    - Split tunneling is disabled for devices accessing Restricted
+      data.
+    - Public Wi-Fi may be used only with the VPN active.
+    - Home routers must use WPA3 or WPA2-AES with a non-default
+      administrator password.
+
+SECTION 3: GOVERNANCE & ENFORCEMENT
+----------------------------------------------------------------
+    - Non-compliant devices are automatically quarantined from the
+      network after 24 hours' notice.
+    - Lost or stolen equipment must be reported to the Security
+      Operations Center within 2 hours.
+    - Employees must not process Restricted data in public spaces
+      or on shared household devices.
+    - Equipment purchased with stipend funds remains company
+      property for 24 months, subject to pro-rated repayment upon
+      voluntary separation.
+    - Exceptions require written approval from the CISO.
+
+Review cycle: annual. Next review: December 2027.

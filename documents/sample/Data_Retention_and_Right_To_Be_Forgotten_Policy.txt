@@ -1,0 +1,14 @@
+GLOBAL PRIVACY DIRECTIVE: DATA RETENTION & ERASURE
+Compliance Alignment: EU GDPR Article 17 ('Right to Erasure') & CCPA Section 1798.105
+Public Document Reference: PRIV-2027-RET
+
+1. DEFAULT RETENTION SCHEDULES
+- Customer Transaction Records: Retained for seven (7) years to comply with tax and audit regulations.
+- Inactive Account Profiles: Automatically purged after 24 months of verified inactivity.
+- Application Diagnostic Logs: Retained in warm storage for 30 days, compressed in cold storage for 90 days, then irreversibly erased.
+
+2. DATA ERASURE WORKFLOW
+When a verified erasure request is received:
+1. Customer metadata is deleted from relational databases and MongoDB collections within 72 hours.
+2. Vector embeddings associated with the user are scrubbed from the vector index.
+3. Cryptographic audit logs retain an anonymized SHA-256 verification hash confirming the erasure action without storing PII.

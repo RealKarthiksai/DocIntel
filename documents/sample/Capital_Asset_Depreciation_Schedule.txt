@@ -1,0 +1,22 @@
+CAPITAL EXPENDITURE ASSET LEDGER (MACRS 5-YEAR & 7-YEAR SCHEDULE)
+Classification: Internal Corporate Accounting Record
+Fiscal Year: 2026 - 2027
+
+Asset Category 1: High-Performance GPU Computing Clusters
+- Description: 32x NVIDIA H100 SXM5 80GB Server Nodes
+- Purchase Date: March 2026
+- Capitalized Cost: $2,840,000.00
+- Depreciation Method: Modified Accelerated Cost Recovery System (MACRS) 5-Year
+- Year 1 Depreciation Rate: 20.00% ($568,000.00)
+- Year 2 Depreciation Rate: 32.00% ($908,800.00)
+- Residual Salvage Value: $142,000.00
+
+Asset Category 2: Office Facilities & Data Center Infrastructure
+- Description: Primary Austin Data Center Backup Generators & HVAC Upgrades
+- Purchase Date: August 2026
+- Capitalized Cost: $1,250,000.00
+- Depreciation Method: Straight Line (15-Year Life)
+- Annual Deduction: $83,333.33
+
+Auditor Sign-off: Ernst & Young LLP
+Review Status: Pending Dual Controller Review

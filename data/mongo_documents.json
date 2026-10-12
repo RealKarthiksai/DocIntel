@@ -719,5 +719,294 @@
     "created_at": "2026-10-11T16:39:50.322000",
     "page_count": 1,
     "raw_character_count": 746
+  },
+  {
+    "document_id": "DOC-D691DFD2",
+    "title": "Button Test Financial Audit Memo",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "Deloitte",
+    "tags": [
+      "audit",
+      "button_test"
+    ],
+    "custom_fields": {
+      "audit_year": "2026"
+    },
+    "created_at": "2026-10-12T05:46:26.020000",
+    "page_count": 1,
+    "raw_character_count": 91
+  },
+  {
+    "document_id": "DOC-CD9AD2FA",
+    "title": "Q1 2027 SaaS Recurring Revenue & Margin Forecast",
+    "department": "finance",
+    "classification": "confidential",
+    "vendor": "Internal FP&A",
+    "tags": [
+      "forecast",
+      "revenue",
+      "saas",
+      "cogs"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:17:13.340000",
+    "page_count": 1,
+    "raw_character_count": 2536
+  },
+  {
+    "document_id": "DOC-483170B7",
+    "title": "Q1 2027 SaaS Revenue & Margin Forecast",
+    "department": "finance",
+    "classification": "confidential",
+    "vendor": "Strategic FP&A",
+    "tags": [
+      "forecast",
+      "revenue",
+      "saas",
+      "cogs"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:08.480000",
+    "page_count": 1,
+    "raw_character_count": 2536
+  },
+  {
+    "document_id": "DOC-86D7566D",
+    "title": "Q4 Vendor Procurement & Technology Invoices Batch",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "Databricks / Snowflake / CrowdStrike",
+    "tags": [
+      "procurement",
+      "invoice",
+      "vendor",
+      "payments"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:15.043000",
+    "page_count": 1,
+    "raw_character_count": 2383
+  },
+  {
+    "document_id": "DOC-02CFDFD5",
+    "title": "Capital Asset Depreciation & Tax Amortization Schedule",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "Ernst & Young LLP",
+    "tags": [
+      "assets",
+      "depreciation",
+      "tax",
+      "accounting"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:28.499000",
+    "page_count": 1,
+    "raw_character_count": 2418
+  },
+  {
+    "document_id": "DOC-BC0956D3",
+    "title": "Master Services Agreement - CloudScale Technologies",
+    "department": "legal",
+    "classification": "confidential",
+    "vendor": "CloudScale Networks LLC",
+    "tags": [
+      "msa",
+      "contract",
+      "sla",
+      "liability"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:35.208000",
+    "page_count": 1,
+    "raw_character_count": 2813
+  },
+  {
+    "document_id": "DOC-1972B92B",
+    "title": "Standard Mutual Non-Disclosure Agreement (MNDA)",
+    "department": "legal",
+    "classification": "internal",
+    "vendor": "Legal Corporate Affairs",
+    "tags": [
+      "nda",
+      "confidentiality",
+      "legal",
+      "compliance"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:42.349000",
+    "page_count": 1,
+    "raw_character_count": 2981
+  },
+  {
+    "document_id": "DOC-66AF4BF1",
+    "title": "Employee Patent Assignment & Proprietary Inventions Transfer",
+    "department": "legal",
+    "classification": "restricted",
+    "vendor": "US Patent & Trademark Office",
+    "tags": [
+      "patent",
+      "ip",
+      "invention",
+      "assignment"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:49.233000",
+    "page_count": 1,
+    "raw_character_count": 2592
+  },
+  {
+    "document_id": "DOC-4473E191",
+    "title": "Global Employee Handbook & Workplace Guidelines 2027",
+    "department": "hr",
+    "classification": "internal",
+    "vendor": "Global People Operations",
+    "tags": [
+      "handbook",
+      "policies",
+      "pto",
+      "benefits"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:18:56.875000",
+    "page_count": 1,
+    "raw_character_count": 2525
+  },
+  {
+    "document_id": "DOC-8A127C89",
+    "title": "Executive Compensation & Performance Equity Incentive Plan",
+    "department": "hr",
+    "classification": "restricted",
+    "vendor": "Board Compensation Committee",
+    "tags": [
+      "executive",
+      "equity",
+      "compensation",
+      "bonus"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:03.472000",
+    "page_count": 1,
+    "raw_character_count": 2696
+  },
+  {
+    "document_id": "DOC-A6D03016",
+    "title": "Remote Work Security & Asset Protection Standards",
+    "department": "hr",
+    "classification": "public",
+    "vendor": "IT Infrastructure & HR",
+    "tags": [
+      "remote_work",
+      "security",
+      "hardware",
+      "policy"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:09.899000",
+    "page_count": 1,
+    "raw_character_count": 2641
+  },
+  {
+    "document_id": "DOC-028A3CBD",
+    "title": "Distributed Multi-Model RAG Architecture Specification",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Core Systems Architecture",
+    "tags": [
+      "architecture",
+      "rag",
+      "vector",
+      "database"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:18.883000",
+    "page_count": 1,
+    "raw_character_count": 2822
+  },
+  {
+    "document_id": "DOC-CF2B0536",
+    "title": "Zero-Trust API Gateway Security & Threat Mitigation",
+    "department": "engineering",
+    "classification": "confidential",
+    "vendor": "Platform Security Engineering",
+    "tags": [
+      "zero_trust",
+      "gateway",
+      "tls",
+      "api"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:26.036000",
+    "page_count": 1,
+    "raw_character_count": 2698
+  },
+  {
+    "document_id": "DOC-517B9661",
+    "title": "SRE Incident Management & Escalation Runbook",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Site Reliability Engineering",
+    "tags": [
+      "sre",
+      "runbook",
+      "incident",
+      "on_call"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:35.280000",
+    "page_count": 1,
+    "raw_character_count": 2952
+  },
+  {
+    "document_id": "DOC-7725FE3E",
+    "title": "SOC-2 Type II Independent Service Auditor Report",
+    "department": "general",
+    "classification": "confidential",
+    "vendor": "PricewaterhouseCoopers LLP (PwC)",
+    "tags": [
+      "soc2",
+      "audit",
+      "compliance",
+      "security"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:42.327000",
+    "page_count": 1,
+    "raw_character_count": 2780
+  },
+  {
+    "document_id": "DOC-27363721",
+    "title": "Third-Party Vendor Cybersecurity Risk Assessment",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "CISO Office",
+    "tags": [
+      "risk_assessment",
+      "vendor",
+      "nist",
+      "supply_chain"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:49.620000",
+    "page_count": 1,
+    "raw_character_count": 2657
+  },
+  {
+    "document_id": "DOC-B705C9D2",
+    "title": "GDPR & CCPA Data Retention and Erasure Policy",
+    "department": "general",
+    "classification": "public",
+    "vendor": "Global Data Privacy Office",
+    "tags": [
+      "gdpr",
+      "ccpa",
+      "privacy",
+      "retention"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T06:19:56.921000",
+    "page_count": 1,
+    "raw_character_count": 3171
   }
 ]

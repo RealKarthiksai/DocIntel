@@ -1,0 +1,59 @@
+VENDOR THIRD-PARTY RISK ASSESSMENT
+================================================================
+Document ID:      SEC-TPRM-2027-012
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Security & Compliance (Third-Party Risk)
+Author:           Omar Haddad, TPRM Lead
+Vendor Assessed:  Helix Data Services, Inc.
+Effective Date:   February 3, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+Helix Data Services provides managed data labeling and OCR
+processing for DocIntel. Annual spend is $640,000. The vendor
+accesses Confidential documents and is therefore classified
+Tier 1 (critical). This assessment follows NIST SP 800-161 Rev. 1
+cyber supply chain risk management guidance.
+
+Overall Result: 77% (MODERATE RISK). Approved with conditions.
+
+SECTION 2: SCORING MATRIX
+----------------------------------------------------------------
+Scale: 1 (poor) to 5 (excellent). Weighted score = weight x score.
+
+Domain                         Weight   Score   Weighted
+-----------------------------  ------   -----   --------
+Cybersecurity Controls           30       4       120
+Supply Chain Integrity           20       3        60
+Financial Stability              15       4        60
+Regulatory Compliance            15       5        75
+Business Continuity / DR         10       3        30
+Data Privacy                     10       4        40
+                               ------           --------
+Total                           100               385 / 500
+
+Risk Tiers: 80% or above = Low; 60-79% = Moderate; below 60% =
+High.
+
+Key Findings
+  - Strengths: SOC 2 Type II and ISO 27001 certified; encryption
+    in transit and at rest verified.
+  - Gap 1: Fourth-party subcontractors (2 offshore annotation
+    teams) lack documented security reviews.
+  - Gap 2: DR recovery time objective is 24 hours versus
+    Northbridge's required 8 hours.
+
+SECTION 3: GOVERNANCE & CONDITIONS
+----------------------------------------------------------------
+    - Conditions of approval: close Gap 1 within 90 days and Gap 2
+      within 180 days; failure triggers review of the contract.
+    - Helix must notify Northbridge of security incidents within
+      48 hours and of subcontractor changes within 30 days.
+    - Reassessment frequency for Tier 1 vendors with Moderate risk:
+      every 12 months, with continuous security-rating monitoring.
+    - Approval required from the CISO and the Procurement Director
+      for spend above $250,000.
+
+Approval Reference: APR-TPRM-2027-0031

@@ -1,0 +1,65 @@
+MASTER SERVICES AGREEMENT
+================================================================
+Agreement No.:    MSA-CS-004
+Parties:          Northbridge Global Technologies, Inc. ("Customer")
+                  CloudScale Systems, LLC ("Provider")
+Department:       Legal
+Author:           Rachel Kim, Associate General Counsel
+Effective Date:   January 15, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This Master Services Agreement governs Provider's delivery of
+managed cloud hosting, disaster recovery, and 24x7 operations
+support to Customer. Initial term is 36 months from the
+Effective Date, renewing for successive 12-month periods unless
+either party gives 90 days' written notice of non-renewal.
+
+Annual Fees: $2,400,000, invoiced quarterly in advance, Net 30.
+
+SECTION 2: SERVICE LEVELS & COMMERCIAL TERMS
+----------------------------------------------------------------
+2.1 Availability SLA ("Four Nines")
+    Provider shall maintain 99.99% monthly uptime for production
+    services, equal to no more than 4.38 minutes of unplanned
+    downtime per month (about 52.6 minutes per year). Scheduled
+    maintenance in agreed windows is excluded.
+
+2.2 Service Credits (percentage of monthly fees)
+      Uptime >= 99.90% and < 99.99% ........ 10%
+      Uptime >= 99.00% and < 99.90% ........ 25%
+      Uptime < 99.00% ....................... 50%
+    Credits are the sole remedy for SLA failures except under
+    Section 3.3 (chronic failure).
+
+2.3 Incident Response
+    Severity-1 incidents: 15-minute response, 4-hour resolution
+    target, with root-cause analysis delivered within 5 business
+    days.
+
+SECTION 3: GOVERNANCE, LIABILITY & LEGAL TERMS
+----------------------------------------------------------------
+3.1 Limitation of Liability
+    Each party's aggregate liability is capped at the fees paid or
+    payable in the 12 months preceding the claim ($2,400,000).
+    The cap does not apply to confidentiality breaches, data
+    protection violations, gross negligence, or indemnified
+    third-party IP claims.
+
+3.2 Data Protection
+    Provider shall encrypt Customer data at rest (AES-256) and in
+    transit (TLS 1.2 or higher), and shall notify Customer of any
+    security incident within 48 hours of discovery.
+
+3.3 Chronic Failure
+    Customer may terminate without penalty if uptime falls below
+    99.90% in any three months of a rolling six-month period.
+
+3.4 Governing Law & Venue
+    This Agreement is governed by the laws of the State of
+    Delaware. Disputes shall be heard exclusively in the state or
+    federal courts located in Wilmington, Delaware.
+
+Signed: Marcus Hale (CFO, Customer)  |  Thomas Reyes (CEO, Provider)

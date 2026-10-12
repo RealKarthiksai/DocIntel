@@ -1,0 +1,59 @@
+ZERO TRUST API GATEWAY SECURITY PLAYBOOK
+================================================================
+Document ID:      ENG-SEC-2027-008
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Engineering (Platform Security)
+Author:           Sofia Lindqvist, Staff Security Engineer
+Effective Date:   January 10, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This playbook defines the baseline security configuration for all
+external and internal APIs fronted by the Envoy gateway. It
+applies the zero trust principle "never trust, always verify":
+every request is authenticated, authorized, and encrypted,
+regardless of network origin.
+
+SECTION 2: TECHNICAL SPECIFICATIONS
+----------------------------------------------------------------
+2.1 Transport Security
+    - TLS 1.3 only at the edge; TLS 1.0-1.2 disabled.
+    - Cipher suites: TLS_AES_256_GCM_SHA384 and
+      TLS_CHACHA20_POLY1305_SHA256.
+    - HSTS enabled with max-age of 31,536,000 seconds.
+    - Service-to-service traffic uses mutual TLS (mTLS) with
+      certificates issued by the internal CA and rotated every
+      24 hours.
+
+2.2 Authentication and Tokens
+    - JWTs signed with ES256; signing keys rotated every 90 days
+      with a 7-day overlap window.
+    - Access token lifetime: 15 minutes.
+    - Refresh token lifetime: 8 hours, single-use with rotation.
+    - Required claims: iss, aud, sub, exp, jti, and tenant_id.
+    - Tokens for Restricted data scopes require step-up MFA
+      within the last 10 minutes.
+
+2.3 Rate Limiting (Envoy global rate limit service)
+    - Standard clients: 100 requests/second, burst 200.
+    - Partner API keys: 500 requests/second, burst 1,000.
+    - Authentication endpoints: 10 requests/minute per IP.
+    - Exceeded limits return HTTP 429 with a Retry-After header.
+
+2.4 Request Validation
+    - Maximum request body: 10 MB (upload endpoints: 100 MB).
+    - OpenAPI schema validation enforced at the gateway.
+    - WAF rules aligned to OWASP Top 10 (2021).
+
+SECTION 3: GOVERNANCE & CONSTRAINTS
+----------------------------------------------------------------
+    - Any exception to TLS, token lifetime, or rate limit
+      baselines requires written approval from the CISO.
+    - Gateway configuration is managed as code; changes require
+      two reviewers and a passing policy test suite.
+    - Security events are streamed to the SIEM with a maximum
+      latency of 60 seconds.
+    - Quarterly penetration testing by an approved third party;
+      critical findings must be remediated within 7 days.

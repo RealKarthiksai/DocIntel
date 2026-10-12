@@ -1,0 +1,56 @@
+NORTHBRIDGE GLOBAL TECHNOLOGIES, INC.
+EXECUTIVE COMPENSATION AND EQUITY FRAMEWORK - FY2027
+================================================================
+Document ID:      HR-COMP-2027-EXEC-02
+Department:       Human Resources (Total Rewards)
+Author:           Jennifer Albrecht, CPO, for the Compensation
+                  Committee of the Board
+Effective Date:   January 1, 2027
+Classification:   RESTRICTED
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This framework sets C-suite base salary benchmarks, annual
+incentive targets, and long-term equity design for FY2027. Targets
+are positioned at the 60th percentile of a 18-company peer group
+selected by independent consultant Pearl Meyer.
+
+SECTION 2: COMPENSATION BENCHMARKS
+----------------------------------------------------------------
+Role                 Base Salary   Target Bonus   Target LTI (PSU/RSU)
+-------------------  -----------   ------------   --------------------
+Chief Executive Off. $  750,000       120%           $3,500,000
+Chief Financial Off. $  520,000       80%            $1,400,000
+Chief Technology Off.$  540,000       80%            $1,500,000
+Chief Legal Officer  $  480,000       70%            $1,000,000
+Chief People Officer $  430,000       70%            $  850,000
+
+Long-Term Incentive Mix
+  - 60% Performance Stock Units (PSUs), 40% Restricted Stock
+    Units (RSUs).
+  - PSUs vest after a 3-year performance period based on relative
+    Total Shareholder Return (50%) and ARR growth (50%).
+  - Payout range: 0% to 200% of target; threshold at 25th
+    percentile TSR.
+  - RSUs vest ratably over 4 years (25% annually).
+
+Annual Bonus Metrics: Revenue 40%, Operating Margin 30%, Net
+Revenue Retention 20%, Strategic/ESG Objectives 10%.
+
+SECTION 3: GOVERNANCE & CLAWBACK
+----------------------------------------------------------------
+  - Clawback: Incentive compensation is subject to recovery for
+    36 months following payment if the Company restates its
+    financial statements, regardless of fault, in accordance
+    with SEC Rule 10D-1 and NYSE listing standards. Recovery
+    also applies to misconduct causing material harm.
+  - Stock ownership guidelines: CEO 6x base salary; other
+    executives 3x base salary, to be met within 5 years.
+  - Hedging and pledging of Company stock is prohibited.
+  - All changes require approval by the Compensation Committee;
+    amendments to equity plans require Board approval.
+  - Access to this document is limited to Committee members, the
+    CPO, the CLO, and the external consultant.
+
+Approval Reference: COMP-COMM-2026-12-17

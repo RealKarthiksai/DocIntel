@@ -1,0 +1,60 @@
+SOC 2 TYPE II COMPLIANCE AUDIT REPORT (SUMMARY)
+================================================================
+Document ID:      SEC-AUD-2027-001
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Security & Compliance
+Author:           Grace Holloway, Head of GRC
+Report Period:    January 1, 2026 - December 31, 2026
+Effective Date:   February 10, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+Independent service auditor PricewaterhouseCoopers LLP examined
+the design and operating effectiveness of controls for the
+DocIntel platform against the Trust Services Criteria for
+Security, Availability, and Confidentiality.
+
+Auditor's Opinion: UNQUALIFIED. Controls were suitably designed
+and operated effectively throughout the period, except as noted
+in Section 2.
+
+SECTION 2: TESTING RESULTS
+----------------------------------------------------------------
+Control Area                   Sample    Exceptions   Result
+-----------------------------  ------    ----------   ----------
+CC6.1 FIDO2 MFA for admins       25          0         Effective
+CC6.2 User access provisioning   40          0         Effective
+CC6.3 Access revocation          40          2         Exception
+CC7.2 Security monitoring        60          0         Effective
+CC8.1 Change management          60          0         Effective
+A1.2  Backup and recovery        12          0         Effective
+C1.1  Hash-chained audit ledger  60          0         Effective
+
+Notable Observations
+  - FIDO2 hardware-key MFA was enforced for 100% of privileged
+    accounts; no password-only administrative access was found.
+  - Hash ledger integrity tests recomputed chain digests across 60
+    sampled days and found no gaps, reorderings, or alterations.
+  - Exception: 2 of 40 terminated users retained access for 3 and
+    5 days beyond the 24-hour revocation standard. No evidence of
+    inappropriate access was identified.
+
+Management Response
+  Automated HRIS-to-IdP deprovisioning was deployed on
+  November 14, 2026 and now revokes access within 1 hour of
+  termination.
+
+SECTION 3: GOVERNANCE & DISTRIBUTION
+----------------------------------------------------------------
+    - This report is restricted to customers and prospects under
+      NDA and must not be redistributed.
+    - Bridge letter covering January 1 - March 31, 2027 will be
+      issued upon request.
+    - The next audit period begins January 1, 2027, with fieldwork
+      scheduled for Q4 2027.
+    - Remediation of any exception must be validated by Internal
+      Audit within 90 days.
+
+Approved by: Dana Whitfield, Chief Information Security Officer

@@ -1,0 +1,58 @@
+PATENT ASSIGNMENT AND INTELLECTUAL PROPERTY TRANSFER
+================================================================
+Document ID:      LEG-IP-2027-006
+Department:       Legal (Intellectual Property)
+Author:           Anil Deshmukh, Senior Patent Counsel
+Effective Date:   January 22, 2027
+Classification:   RESTRICTED
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+Inventors Dr. Mei Lin Zhou and Samuel Brandt ("Assignors")
+assign to Northbridge Global Technologies, Inc. ("Assignee") all
+right, title, and interest in the invention titled:
+
+  "Hash-Chained Tamper-Evident Audit Ledger for Document
+   Workflow Systems"
+
+Provisional Application No. 63/812,447, filed December 19, 2026.
+Internal Disclosure Reference: IDF-2026-0338.
+
+The invention is designated a classified trade secret until the
+non-provisional filing publishes, expected no earlier than 18
+months from the priority date.
+
+SECTION 2: TECHNICAL SUMMARY & CONSIDERATION
+----------------------------------------------------------------
+Claims Overview
+  Claim 1: A method of recording document events in which each
+           ledger entry stores a SHA-256 digest of the prior entry
+           concatenated with the current event payload.
+  Claim 2: Periodic anchoring of the chain head to an independent
+           write-once store, enabling third-party verification.
+  Claim 3: A verification service that detects insertion,
+           deletion, or reordering of entries in O(n) time.
+
+Consideration
+  - $1.00 and other good and valuable consideration, receipt
+    acknowledged.
+  - Filing bonus: $15,000 per inventor, payable within 60 days of
+    non-provisional filing.
+  - Royalty-sharing eligibility under Corporate Invention Policy
+    IP-004 (Tier 2).
+
+SECTION 3: GOVERNANCE & CONSTRAINTS
+----------------------------------------------------------------
+  - Assignors shall execute all further documents needed to
+    perfect and enforce rights worldwide, at Assignee's expense.
+  - Assignors retain no license and shall not disclose the
+    invention before publication without written Legal approval.
+  - Access to the invention file is limited to the IP Legal team,
+    the CTO, and named inventors; all access is logged.
+  - Execution requires notarization and dual-custody storage of the
+    original instrument (Legal vault and offsite escrow).
+  - This Assignment is governed by the laws of the State of
+    California.
+
+Notarized: January 22, 2027  |  Recorded: USPTO Reel/Frame 61842/0107

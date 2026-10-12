@@ -1,0 +1,57 @@
+NORTHBRIDGE GLOBAL TECHNOLOGIES, INC.
+Q1 2027 SAAS REVENUE FORECAST
+================================================================
+Document ID:      FIN-FCST-2027-Q1-003
+Department:       Finance
+Author:           Priya Raman, VP Financial Planning & Analysis
+Effective Date:   January 6, 2027
+Classification:   CONFIDENTIAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This forecast projects recurring revenue, gross margin, and cloud
+cost of goods sold (COGS) for the quarter ending March 31, 2027.
+It covers all subscription product lines (Platform, Analytics,
+and Compliance Cloud) across North America, EMEA, and APAC.
+
+Headline outcome: Annual Recurring Revenue (ARR) is forecast to
+grow from $84.2M to $91.8M, a net increase of $7.6M (9.0%) in the
+quarter. Recognized quarterly revenue is projected at $22.0M with
+a blended gross margin of 72.0%.
+
+SECTION 2: FINANCIAL DATA
+----------------------------------------------------------------
+ARR Bridge (USD millions)
+  Opening ARR (Jan 1, 2027) ............ $84.2M
+  + New Logo ARR ....................... $ 6.1M
+  + Expansion ARR ...................... $ 3.4M
+  - Churn & Contraction ................ $(1.9M)
+  = Closing ARR (Mar 31, 2027) ......... $91.8M
+
+Gross Margin Analysis (USD millions)
+  Recognized Revenue ................... $22.00M
+  Cloud Infrastructure COGS ............ $ 4.40M  (20.0% of rev)
+  Support, Success & 3rd-Party COGS .... $ 1.76M  ( 8.0% of rev)
+  Total COGS ........................... $ 6.16M
+  Gross Profit ......................... $15.84M
+  Gross Margin ......................... 72.0%
+
+Key Assumptions
+  - Net revenue retention: 104% (trailing twelve months)
+  - Gross logo churn: 1.1% per quarter
+  - Average new-deal ACV: $142,000 (pipeline coverage 3.2x)
+  - Cloud COGS reduced by approx. $310K via committed-use discounts
+
+SECTION 3: GOVERNANCE & APPROVALS
+----------------------------------------------------------------
+  - This forecast requires CFO sign-off prior to board distribution.
+  - Variance greater than +/-3% versus actuals triggers a re-forecast
+    within 10 business days of month-end close.
+  - Revenue recognition follows ASC 606; multi-year prepayments are
+    recognized ratably over the contract term.
+  - Distribution is limited to Finance leadership, the Executive
+    Committee, and the Audit Committee.
+
+Approved by: Marcus Hale, Chief Financial Officer
+Approval Reference: APR-FIN-2027-0112

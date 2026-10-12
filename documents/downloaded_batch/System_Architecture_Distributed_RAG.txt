@@ -1,0 +1,60 @@
+SYSTEM ARCHITECTURE SPECIFICATION: DISTRIBUTED RAG PLATFORM
+================================================================
+Document ID:      ENG-ARCH-2027-021
+Organization:     Northbridge Global Technologies, Inc.
+Department:       Engineering (Platform Architecture)
+Author:           Dr. Arjun Mehta, Principal Architect
+Effective Date:   January 18, 2027
+Classification:   INTERNAL
+================================================================
+
+SECTION 1: EXECUTIVE SUMMARY & SCOPE
+----------------------------------------------------------------
+This specification describes the retrieval-augmented generation
+(RAG) subsystem of the DocIntel platform. It combines semantic
+vector search and keyword search to answer questions grounded in
+enterprise documents, while preserving per-document access
+controls. In scope: ingestion, chunking, indexing, hybrid
+retrieval, and the query API. Out of scope: LLM fine-tuning.
+
+SECTION 2: TECHNICAL SPECIFICATIONS
+----------------------------------------------------------------
+2.1 Components
+    - API Layer: FastAPI (Python 3.12), served by Uvicorn behind
+      an Envoy gateway; 8 pods, autoscaled on CPU at 65%.
+    - Vector Store: PostgreSQL 16 with pgvector. Embeddings are
+      1536-dimensional; HNSW index with m=16, ef_construction=200.
+    - Document Store: MongoDB 7.0 replica set (3 nodes) holding raw
+      documents, metadata, and ACL fields.
+    - Queue: Kafka topic "doc.ingest" with 12 partitions.
+
+2.2 Ingestion Pipeline
+    1. Parse PDF/DOCX/TXT/MD and extract text and metadata.
+    2. Chunk into 512 tokens with 64-token overlap.
+    3. Generate embeddings in batches of 64.
+    4. Write chunks to pgvector; write source and ACL to MongoDB.
+
+2.3 Hybrid Search
+    - Dense retrieval: cosine similarity, top 40 candidates.
+    - Sparse retrieval: Postgres full-text (tsvector, BM25-style
+      ranking), top 40 candidates.
+    - Fusion: Reciprocal Rank Fusion with k=60; top 8 chunks are
+      passed to the generator.
+    - ACL filter applied before ranking, not after.
+
+2.4 Performance Targets
+    - p95 query latency: under 800 ms (retrieval only).
+    - Ingestion throughput: 120 pages per second per worker group.
+    - Recall@10 on the internal benchmark: at least 0.92.
+
+SECTION 3: GOVERNANCE & CONSTRAINTS
+----------------------------------------------------------------
+    - Availability target: 99.95% monthly.
+    - All data encrypted at rest (AES-256) and in transit
+      (TLS 1.3).
+    - Restricted-classification documents are excluded from shared
+      embedding indexes and use tenant-isolated schemas.
+    - Schema or index changes require Architecture Review Board
+      approval (ARB-2027-xxx) and a documented rollback plan.
+    - Every query and retrieval is written to the audit log with
+      user, document IDs, and timestamp.
