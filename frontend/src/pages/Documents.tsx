@@ -278,9 +278,10 @@ export const Documents: React.FC = () => {
                   <td className="px-6 py-4 text-right">
                     <Link
                       to={`/documents/${doc.id}`}
-                      className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 transition-colors"
+                      className="inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/80 transition-colors shadow-2xs group"
                     >
-                      Details & Workflow
+                      <FileText className="w-3.5 h-3.5 mr-1 text-indigo-500 group-hover:scale-110 transition-transform" />
+                      <span>Open & Read</span>
                     </Link>
                   </td>
                 </tr>

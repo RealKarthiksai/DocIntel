@@ -6,7 +6,7 @@ from sqlalchemy.orm import selectinload
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db, get_mongo_db, get_chroma_collection, save_mongo_mock_backup
-from app.models.postgres_models import Document, WorkflowHistory, AuditLog
+from app.models.postgres_models import Document, WorkflowHistory, AuditLog, DocumentChunk
 from app.schemas.schemas import DocumentOut, DocumentDetailOut
 from app.security.jwt import get_current_user, CurrentUserContext
 from app.services.document_service import ingest_document
@@ -226,6 +226,90 @@ async def get_document(
         workflow_history=history_list,
         available_actions=VALID_TRANSITIONS.get(doc.status, [])
     )
+
+
+@router.get("/{document_id}/content")
+async def get_document_content(
+    document_id: str,
+    current_user: CurrentUserContext = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """Returns the full text, page-by-page breakdown, and chunks for viewing and reading."""
+    stmt = (
+        select(Document)
+        .where(Document.id == document_id, Document.tenant_id == current_user.tenant_id)
+    )
+    result = await db.execute(stmt)
+    doc = result.scalars().first()
+    if not doc:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Document not found or access denied."
+        )
+
+    # Fetch chunks ordered by page and chunk sequence
+    chunk_stmt = (
+        select(DocumentChunk)
+        .where(DocumentChunk.document_id == document_id)
+        .order_by(DocumentChunk.page.asc(), DocumentChunk.chunk_seq.asc())
+    )
+    chunk_res = await db.execute(chunk_stmt)
+    chunks = chunk_res.scalars().all()
+
+    pages_dict = {}
+    full_text_parts = []
+    chunk_list = []
+    for c in chunks:
+        p = c.page
+        if p not in pages_dict:
+            pages_dict[p] = []
+        pages_dict[p].append(c.text)
+        full_text_parts.append(c.text)
+        chunk_list.append({
+            "chunk_id": c.id,
+            "page": c.page,
+            "chunk_seq": c.chunk_seq,
+            "text": c.text,
+            "word_count": len(c.text.split())
+        })
+
+    pages = [
+        {
+            "page": p,
+            "text": "\n\n".join(texts),
+            "word_count": sum(len(t.split()) for t in texts)
+        }
+        for p, texts in sorted(pages_dict.items(), key=lambda x: x[0])
+    ]
+
+    full_text = "\n\n".join(full_text_parts)
+
+    # Generate an executive summary from top sentences
+    clean_sentences = [
+        s.strip() 
+        for s in full_text.replace("\n", " ").split(".") 
+        if len(s.strip()) > 25 and not s.strip().startswith("#")
+    ]
+    summary_sentences = clean_sentences[:4]
+    summary = ". ".join(summary_sentences) + ("." if summary_sentences else "")
+    if not summary:
+        summary = full_text[:400] + ("..." if len(full_text) > 400 else "")
+
+    return {
+        "document_id": doc.id,
+        "title": doc.title,
+        "department": doc.department,
+        "classification": doc.classification,
+        "status": doc.status,
+        "total_pages": len(pages),
+        "total_chunks": len(chunks),
+        "total_words": len(full_text.split()),
+        "total_chars": len(full_text),
+        "summary": summary,
+        "pages": pages,
+        "chunks": chunk_list,
+        "full_text": full_text
+    }
 
 
 @router.post("/{document_id}/share")
