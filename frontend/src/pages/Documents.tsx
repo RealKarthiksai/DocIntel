@@ -81,7 +81,7 @@ export const Documents: React.FC = () => {
   const handleUploadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!file) {
-      setUploadError("Please select a valid PDF or DOCX file.");
+      setUploadError("Please select a valid document file (PDF, DOCX, TXT, or MD).");
       return;
     }
 
@@ -322,14 +322,14 @@ export const Documents: React.FC = () => {
               {/* File Dropzone */}
               <div>
                 <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                  Binary Document File *
+                  Document File (PDF, DOCX, TXT, MD) *
                 </label>
                 <div className="p-4 rounded-xl border-2 border-dashed border-slate-200 hover:border-indigo-400 transition-colors bg-slate-50/50 text-center">
                   <input
                     type="file"
                     required
                     id="doc-file-input"
-                    accept=".pdf,.docx"
+                    accept=".pdf,.docx,.txt,.md"
                     onChange={(e) => {
                       if (e.target.files && e.target.files[0]) {
                         setFile(e.target.files[0]);
@@ -341,10 +341,10 @@ export const Documents: React.FC = () => {
                   <label htmlFor="doc-file-input" className="cursor-pointer block">
                     <FileText className="w-8 h-8 mx-auto text-indigo-500 mb-1.5" />
                     <div className="text-xs font-semibold text-slate-800">
-                      {file ? file.name : "Click to select or drag PDF / DOCX"}
+                      {file ? file.name : "Click to select or drag PDF, DOCX, TXT, or MD"}
                     </div>
                     <div className="text-[10px] text-slate-400 mt-0.5">
-                      {file ? `${(file.size / 1024).toFixed(1)} KB selected` : "Automatic OCR & 384-d vector embeddings"}
+                      {file ? `${(file.size / 1024).toFixed(1)} KB selected` : "Automatic text extraction & vector indexing"}
                     </div>
                   </label>
                 </div>

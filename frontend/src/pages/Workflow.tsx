@@ -60,10 +60,10 @@ export const Workflow: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       <div>
         <h1 className="text-xl font-bold text-slate-900 tracking-tight">
-          Workflow State Machine Board
+          Document Approval Workflows
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
-          Deterministic transitions enforced by PostgreSQL locks, Kafka events, and role guardrails
+          Track, review, and approve enterprise documents through authorized lifecycle stages
         </p>
       </div>
 

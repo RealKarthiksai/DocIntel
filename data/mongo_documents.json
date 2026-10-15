@@ -1008,5 +1008,82 @@
     "created_at": "2026-10-12T06:19:56.921000",
     "page_count": 1,
     "raw_character_count": 3171
+  },
+  {
+    "document_id": "DOC-33056DC3",
+    "title": "CapEx Budget PDF Test",
+    "department": "finance",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-12T09:45:43.404000",
+    "page_count": 2,
+    "raw_character_count": 678
+  },
+  {
+    "document_id": "DOC-B7773265",
+    "title": "Engineering Incident DOCX Test",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-12T09:45:50.273000",
+    "page_count": 1,
+    "raw_character_count": 929
+  },
+  {
+    "document_id": "DOC-DC3F8BF4",
+    "title": "Public Code of Conduct TXT Test",
+    "department": "general",
+    "classification": "public",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-12T09:45:57.517000",
+    "page_count": 1,
+    "raw_character_count": 423
+  },
+  {
+    "document_id": "DOC-430B7FA3",
+    "title": "Architecture MD Test",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {},
+    "created_at": "2026-10-12T09:46:03.668000",
+    "page_count": 1,
+    "raw_character_count": 1994
+  },
+  {
+    "document_id": "DOC-61F951AC",
+    "title": "dsa",
+    "department": "general",
+    "classification": "internal",
+    "vendor": "",
+    "tags": [],
+    "custom_fields": {
+      "risk_level": "medium"
+    },
+    "created_at": "2026-10-12T09:46:17.175000",
+    "page_count": 48,
+    "raw_character_count": 91946
+  },
+  {
+    "document_id": "DOC-B4F64FF3",
+    "title": "SRE Operational Guidelines",
+    "department": "engineering",
+    "classification": "internal",
+    "vendor": "Internal Platform Team",
+    "tags": [
+      "sre",
+      "operations"
+    ],
+    "custom_fields": {},
+    "created_at": "2026-10-12T09:53:24.035000",
+    "page_count": 1,
+    "raw_character_count": 121
   }
 ]

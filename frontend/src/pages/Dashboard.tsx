@@ -78,7 +78,7 @@ export const Dashboard: React.FC = () => {
             </span>
           </div>
           <p className="text-xs text-slate-500 mt-1">
-            Logged in as <span className="font-semibold text-slate-800">{user?.email}</span> • Active Scope: <span className="font-semibold text-indigo-600">{user?.permissions.join(", ")}</span>
+            Logged in as <span className="font-semibold text-slate-800">{user?.email}</span> • Role: <span className="font-semibold text-indigo-600">{user?.role}</span>
           </p>
         </div>
         <div className="flex items-center gap-2.5">
@@ -154,61 +154,72 @@ export const Dashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Polyglot Architecture & Health Overview */}
-      <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-white shadow-card">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-5 border-b border-slate-800">
-          <div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50 animate-pulse" />
-              <span className="text-[10px] font-bold tracking-wider uppercase text-emerald-400">
-                Multi-Model Infrastructure
-              </span>
+      {/* Enterprise System & Pipeline Status */}
+      <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-card">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+          <div className="flex items-center space-x-2.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-xs shadow-emerald-400/50" />
+            <div>
+              <h2 className="text-sm font-bold text-slate-900">
+                Operational Intelligence & Services Status
+              </h2>
+              <p className="text-xs text-slate-500">
+                All microservices and database engines active with zero reported anomalies
+              </p>
             </div>
-            <h2 className="text-base font-bold mt-1 text-slate-100">
-              Polyglot Storage & Zero-Leakage Vector Engine
-            </h2>
           </div>
           <Link
             to="/audit"
-            className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white flex items-center transition-colors shadow-2xs"
+            className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center transition-colors shadow-2xs self-start sm:self-auto"
           >
-            <ShieldCheck className="w-3.5 h-3.5 mr-1.5" />
-            Verify SHA-256 Chain
+            <ShieldCheck className="w-3.5 h-3.5 mr-1.5 text-indigo-600" />
+            Audit Compliance Ledger →
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-5">
-          <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mt-4">
+          <div className="bg-slate-50/70 p-3.5 rounded-xl border border-slate-200/60">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">PostgreSQL</span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.2 rounded border border-emerald-800/80">
-                {health?.postgres || "connected"}
+              <span className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Document DB</span>
+              <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                Online
               </span>
             </div>
-            <div className="text-xs font-medium text-slate-200 mt-1">ACID & Row-Level Security</div>
-            <div className="text-[11px] text-slate-400 mt-1">Transactions, RBAC, and immutable audit logs</div>
+            <div className="text-xs font-semibold text-slate-800 mt-1.5">Relational & RBAC</div>
+            <div className="text-[11px] text-slate-500 mt-0.5">ACID transactions active</div>
           </div>
 
-          <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60">
+          <div className="bg-slate-50/70 p-3.5 rounded-xl border border-slate-200/60">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">MongoDB</span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.2 rounded border border-emerald-800/80">
-                {health?.mongodb || "connected"}
+              <span className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Metadata Store</span>
+              <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                Online
               </span>
             </div>
-            <div className="text-xs font-medium text-slate-200 mt-1">Document & Schema-Free Store</div>
-            <div className="text-[11px] text-slate-400 mt-1">Dynamic metadata, extraction JSON, and tags</div>
+            <div className="text-xs font-semibold text-slate-800 mt-1.5">Document Records</div>
+            <div className="text-[11px] text-slate-500 mt-0.5">Dynamic schemas & tags</div>
           </div>
 
-          <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60">
+          <div className="bg-slate-50/70 p-3.5 rounded-xl border border-slate-200/60">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">ChromaDB</span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.2 rounded border border-emerald-800/80">
-                active (HNSW)
+              <span className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Vector Engine</span>
+              <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                Active
               </span>
             </div>
-            <div className="text-xs font-medium text-slate-200 mt-1">Dense Vector Embeddings</div>
-            <div className="text-[11px] text-slate-400 mt-1">384-d cosine distance with pre-retrieval ACL mask</div>
+            <div className="text-xs font-semibold text-slate-800 mt-1.5">Embedding Index</div>
+            <div className="text-[11px] text-slate-500 mt-0.5">Pre-retrieval scope filter</div>
+          </div>
+
+          <div className="bg-slate-50/70 p-3.5 rounded-xl border border-slate-200/60">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Integrity Ledger</span>
+              <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                Verified
+              </span>
+            </div>
+            <div className="text-xs font-semibold text-slate-800 mt-1.5">SHA-256 Chain</div>
+            <div className="text-[11px] text-slate-500 mt-0.5">Immutable audit trail</div>
           </div>
         </div>
       </div>

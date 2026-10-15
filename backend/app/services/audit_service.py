@@ -11,6 +11,10 @@ def calculate_audit_hash(timestamp_str: str, actor_id: str, action: str, documen
     raw = f"{timestamp_str}|{actor_id}|{action}|{document_id}|{previous_hash}"
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
+import asyncio
+
+_audit_lock = asyncio.Lock()
+
 async def log_audit_event(
     db: AsyncSession,
     action: str,
@@ -18,33 +22,34 @@ async def log_audit_event(
     document_id: Optional[str] = None,
     metadata_info: Optional[Dict[str, Any]] = None
 ) -> AuditLog:
-    # 1. Fetch latest audit record to get previous_hash
-    stmt = select(AuditLog).order_by(desc(AuditLog.id)).limit(1)
-    result = await db.execute(stmt)
-    latest_record = result.scalars().first()
-    
-    previous_hash = latest_record.current_hash if latest_record else GENESIS_HASH
-    now_utc = datetime.datetime.now(datetime.timezone.utc)
-    now_str = now_utc.isoformat()
-    
-    actor_str = str(actor_id) if actor_id is not None else "SYSTEM"
-    doc_str = str(document_id) if document_id is not None else "NONE"
-    
-    current_hash = calculate_audit_hash(now_str, actor_str, action, doc_str, previous_hash)
-    
-    audit_entry = AuditLog(
-        document_id=document_id,
-        actor_id=actor_id,
-        action=action,
-        timestamp=now_utc,
-        metadata_json=metadata_info or {},
-        previous_hash=previous_hash,
-        current_hash=current_hash
-    )
-    db.add(audit_entry)
-    await db.commit()
-    await db.refresh(audit_entry)
-    return audit_entry
+    async with _audit_lock:
+        # 1. Fetch latest audit record to get previous_hash
+        stmt = select(AuditLog).order_by(desc(AuditLog.id)).limit(1)
+        result = await db.execute(stmt)
+        latest_record = result.scalars().first()
+        
+        previous_hash = latest_record.current_hash if latest_record else GENESIS_HASH
+        now_utc = datetime.datetime.now(datetime.timezone.utc)
+        now_str = now_utc.isoformat()
+        
+        actor_str = str(actor_id) if actor_id is not None else "SYSTEM"
+        doc_str = str(document_id) if document_id is not None else "NONE"
+        
+        current_hash = calculate_audit_hash(now_str, actor_str, action, doc_str, previous_hash)
+        
+        audit_entry = AuditLog(
+            document_id=document_id,
+            actor_id=actor_id,
+            action=action,
+            timestamp=now_utc,
+            metadata_json=metadata_info or {},
+            previous_hash=previous_hash,
+            current_hash=current_hash
+        )
+        db.add(audit_entry)
+        await db.commit()
+        await db.refresh(audit_entry)
+        return audit_entry
 
 async def verify_audit_chain(db: AsyncSession) -> Dict[str, Any]:
     stmt = select(AuditLog).order_by(AuditLog.id.asc())

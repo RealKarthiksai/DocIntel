@@ -105,7 +105,7 @@ export const Navbar: React.FC = () => {
                 health?.status === "healthy" ? "bg-emerald-500 shadow-xs shadow-emerald-400/50 animate-pulse" : "bg-amber-500"
               }`} />
               <span className="text-slate-600 font-medium">
-                {health?.status === "healthy" ? "Polyglot Engine Live" : "Connecting..."}
+                {health?.status === "healthy" ? "System Status: Operational" : "Connecting..."}
               </span>
             </div>
 

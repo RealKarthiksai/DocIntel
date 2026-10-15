@@ -143,7 +143,7 @@ export const Audit: React.FC = () => {
               ? "bg-emerald-100 text-emerald-800 border-emerald-200" 
               : "bg-rose-100 text-rose-800 border-rose-200"
           }`}>
-            {verification.is_forbidden ? "PERMISSION REQUIRED" : verification.is_valid ? "100% UNTAMPERED" : "TAMPERED"}
+            {verification.is_forbidden ? "PERMISSION REQUIRED" : verification.is_valid ? "INTEGRITY: VALID" : "INTEGRITY: COMPROMISED"}
           </span>
         </div>
       )}
